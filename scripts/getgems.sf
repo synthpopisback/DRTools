@@ -1,0 +1,377 @@
+#gems
+
+;Created by Kraelyst
+
+ECHO
+ECHO
+ECHO *** USAGE:
+ECHO ***   .gems
+ECHO ***     (picks up all gems on the ground)
+ECHO
+ECHO ***   .gems [gem1] [gem2] [gem3] [gem4] . . .
+ECHO ***     (picks up specified gems on the ground or from a container, such as a box)
+ECHO
+ECHO
+if_1 goto GEMSTART
+goto LOOKBEGIN
+
+LOOK1:
+wait
+LOOKBEGIN:
+SAVE LOOK1
+match ruby dragon's eye ruby
+match pearl grey pearl
+match opal black opal
+match gem aquamarine gem
+match ruby star ruby
+match sapphire pink sapphire
+match sapphire yellow sapphire
+match sapphire green sapphire
+match amethyst amethyst
+match bar silver bar
+match nugget silver nugget
+match bar gold bar
+match nugget gold nugget
+match bloodstone red-green bloodstone
+match rockcrystal rock crystal
+match diamond uncut diamond
+match diopside star diopside
+match jasper red jasper
+match quartz eye quartz
+match quartz rose quartz
+match stone malachite stone
+match stone turquoise stone
+match topaz clear topaz
+match zircon green zircon
+match emerald emerald
+match agate agate
+match andalusite andalusite
+match chrysoprase chrysoprase
+match crystal crystal
+;RARE GEMS
+match ruby flawless ruby
+match diamond chipped diamond
+match diamond blue diamond
+match diamond tear-shaped diamond
+match diamond glittering diamond
+match diamond huge diamond
+match LOOK2 Obvious
+put look
+matchwait
+
+LOOK2:
+SAVE LOOK2
+wait
+;RARE GEMS
+match sapphire flawed sapphire
+match sapphire star sapphire
+match pearl white pearl
+match pearl black pearl
+match pearl freshwater pearl
+match topaz glittering topaz
+match aquamarine gleaming aquamarine
+match opal fire opal
+match opal draconic opal
+match opal huge opal
+match pebble glass pebble
+match quartz gold-painted quartz
+match quartz gold-encrusted quartz
+match onyx chunk of onyx
+match bead onyx bead
+match alexandrite alexandrite
+match bloodgem bloodgem
+match moonstone moonstone
+match sunstone sunstone
+match lazuli lapis lazuli
+match egg alabaster egg
+match tooth ivory tooth
+match amber dark amber
+match goldstone glittering goldstone
+match minerals glittering minerals
+match eggcase eggcase
+match platinum glittering platinum
+match granite crystallized granite
+match granite laced granite
+match talon seordstone talon
+match card card,
+match LOOK3 Obvious
+put look
+matchwait
+
+LOOK3:
+SAVE LOOK3
+wait
+match ruby dragon's eye ruby
+match pearl grey pearl
+match opal black opal
+match gem aquamarine gem
+match ruby star ruby
+match sapphire pink sapphire
+match sapphire yellow sapphire
+match sapphire green sapphire
+match amethyst amethyst
+match bar silver bar
+match nugget silver nugget
+match bar gold bar
+match nugget gold nugget
+match bloodstone red-green bloodstone
+match rockcrystal rock crystal
+match diamond uncut diamond
+match diopside star diopside
+match jasper red jasper
+match quartz eye quartz
+match quartz rose quartz
+match stone malachite stone
+match stone turquoise stone
+match topaz clear topaz
+match zircon green zircon
+match emerald emerald
+;RARE GEMS
+match ruby flawless ruby
+match diamond chipped diamond
+match diamond blue diamond
+match diamond tear-shaped diamond
+match diamond glittering diamond
+match diamond huge diamond
+match LOOK4 Obvious
+put look
+matchwait
+
+LOOK4:
+SAVE LOOK4
+wait
+;RARE GEMS
+match sapphire flawed sapphire
+match sapphire star sapphire
+match pearl white pearl
+match pearl black pearl
+match pearl freshwater pearl
+match topaz glittering topaz
+match aquamarine gleaming aquamarine
+match opal fire opal
+match opal draconic opal
+match opal huge opal
+match pebble glass pebble
+match quartz gold-painted quartz
+match quartz gold-encrusted quartz
+match onyx chunk of onyx
+match bead onyx bead
+match alexandrite alexandrite
+match bloodgem bloodgem
+match moonstone moonstone
+match sunstone sunstone
+match lazuli lapis lazuli
+match egg alabaster egg
+match tooth ivory tooth
+match amber dark amber
+match goldstone glittering goldstone
+match minerals glittering minerals
+match eggcase eggcase
+match platinum glittering platinum
+match granite crystallized granite
+match granite laced granite
+match talon seordstone talon
+match card card,
+match DONE Obvious
+put look
+matchwait
+
+ruby:
+put stow ruby
+goto %s
+
+pearl:
+put stow pearl
+goto %s
+
+opal:
+put stow opal
+goto %s
+
+gem:
+put stow gem
+goto %s
+
+sapphire:
+put stow sapphire
+goto %s
+
+amethyst:
+put stow amethyst
+goto %s
+
+bar:
+put stow bar
+goto %s
+
+alexandrite:
+put stow alexand
+goto %s
+
+nugget:
+put stow nugget
+goto %s
+
+bloodstone:
+put stow bloodstone
+goto %s
+
+rockcrystal:
+put stow rock crystal
+goto %s
+
+agate:
+put stow agate
+goto %s
+
+andalusite:
+put stow andalusite
+goto %s
+
+chrysoprase:
+put stow chrysoprase
+goto %s
+
+crystal:
+put stow crystal
+goto %s
+
+diamond:
+put stow diamond
+goto %s
+
+diopside:
+put stow diopside
+goto %s
+
+jasper:
+put stow jasper
+goto %s
+
+quartz:
+put stow quartz
+goto %s
+
+stone:
+put stow stone
+goto %s
+
+topaz:
+put stow topaz
+goto %s
+
+zircon:
+put stow zircon
+goto %s
+
+emerald:
+put stow emerald
+goto %s
+
+diamond:
+put stow diamond
+goto %s
+
+aquamarine:
+put stow aquamarine
+goto %s
+
+pebble:
+put stow pebble
+goto %s
+
+onyx:
+put stow onyx
+goto %s
+
+bead:
+put stow bead
+goto %s
+
+alexandrite
+put stow alexandrite
+goto %s
+
+bloodgem:
+put stow bloodgem
+goto %s
+
+moonstone:
+put stow moonstone
+goto %s
+
+sunstone:
+put stow sunstone
+goto %s
+
+lazuli:
+put stow lazuli
+goto %s
+
+egg:
+put stow egg
+goto %s
+
+tooth:
+put stow tooth
+goto %s
+
+amber:
+put stow amber
+goto %s
+
+goldstone:
+put stow goldstone
+goto %s
+
+minerals:
+put stow minerals
+goto %s
+
+eggcase:
+put stow eggcase
+goto %s
+
+platinum:
+put stow platinum
+goto %s
+
+granite:
+put stow granite
+goto %s
+
+talon:
+put stow talon
+goto %s
+
+card:
+put stow card
+goto %s
+
+PAUSE:
+pause
+goto %s
+
+DONE:
+ECHO
+ECHO *** NO MORE GEMS
+ECHO
+EXIT
+
+GEMS:
+wait
+GEMSTART:
+put get %1
+match GEMSHIFT You put your
+match GEMSHIFT I could not find
+match GEMSHIFT What were you referring to?
+match GEMS ...wait
+match GEMS type ahead
+put stow my %1
+matchwait
+
+GEMSHIFT:
+shift
+If_1 goto GEMS
+exit
+

@@ -1,0 +1,68 @@
+start:
+match leftleg The bandages binding your left leg
+match rightleg The bandages binding your right leg
+match abdomen The bandages binding your abdomen
+match chest The bandages binding your chest
+match leftarm The bandages binding your left arm
+match rightarm The bandages binding your right arm
+match back The bandages binding your back
+match neck The bandages binding your neck
+match head The bandages binding your head
+match lefteye The bandages binding your left eye
+match righteye The bandages binding your right eye
+match lefthand The bandages binding your left hand
+match righthand The bandages binding your right hand
+matchwait
+
+leftleg:
+put tend my left leg
+goto start
+
+rightleg:
+put tend my right leg
+goto start
+
+abdomen:
+put tend my abdomen
+goto start
+
+back:
+put tend my back
+goto start
+
+chest:
+put tend my chest
+goto start
+
+rightarm:
+put tend my right arm
+goto start
+
+leftarm:
+put tend my left arm
+goto start
+
+lefthand:
+put tend my left hand
+goto start
+
+righthand:
+put tend my right hand
+goto start
+
+neck:
+put tend my neck
+goto start
+
+head:
+put tend my head
+goto start
+
+righteye:
+put tend my right eye
+goto start
+
+lefteye:
+put tend my left eye
+goto start
+
