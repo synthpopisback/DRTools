@@ -1,3 +1,5 @@
 *.vsidx
 *.wsuo
 *.sqlite
+.vs/DRTools/v17/DocumentLayout.backup.json
+.vs/VSWorkspaceState.json
