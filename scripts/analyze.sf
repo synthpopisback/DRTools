@@ -1,0 +1,116 @@
+LOOP:
+MATCH JAB landing a jab
+MATCH FEINT landing a feint
+MATCH DRAW landing a draw
+MATCH CHOP landing a chop
+MATCH SLICE landing a slice
+MATCH SWEEP landing a sweep
+MATCH LUNGE landing a lunge
+MATCH THRUST landing a thrust
+MATCH SLAM landing a slam
+MATCH SWING landing a swing
+MATCH BASH landing a bash
+MATCH KICK landing a kick
+MATCH SLAP landing a slap
+MATCH GOUGE landing a gouge
+MATCH ELBOW landing an elbow
+MATCH CLAW landing a claw
+MATCH PUNCH landing a punch
+MATCH UNKNOWN Roundtime
+MATCH FACE Analyze what
+MATCH LOOP You must be closer
+MATCH LOOP fail to find
+MATCH LOOP ...wait
+MATCH LOOP You are still stunned.
+
+put anal %1
+MATCHWAIT
+
+THRUST:
+	save "thrust"
+	goto ATTACK
+
+SLAM:
+	save "slam"
+	goto ATTACK
+
+SWING:
+	save "swing"
+	goto ATTACK
+
+BASH:
+	save "bash"
+	goto ATTACK
+
+KICK:
+	save "kick"
+	goto ATTACK
+
+SLAP:
+	save "slap"
+	goto ATTACK
+
+GOUGE:
+	save "gouge"
+	goto ATTACK
+
+ELBOW:
+	save "elbow"
+	goto ATTACK
+
+CLAW:
+	save "claw"
+	goto ATTACK
+
+PUNCH:
+	save "punch"
+	goto ATTACK
+
+LUNGE:
+	save "lunge"
+	goto ATTACK
+
+
+SWEEP:
+	save "sweep"
+	goto ATTACK
+
+SLICE:
+	save "slice"
+	goto ATTACK
+
+CHOP:
+	save "chop"
+	goto ATTACK
+
+DRAW:
+	save "draw"
+	goto ATTACK
+
+JAB:
+	save "jab"
+	goto ATTACK
+
+FEINT:
+	save "feint"
+	goto ATTACK
+
+ATTACK:
+	MATCH LOOP Roundtime
+	MATCH ATTACK ...wait
+	put %s
+	MATCHWAIT
+
+FACE:
+	put loot
+	put face next
+	put hunt
+	waitfor roundtime
+	GOTO LOOP
+
+UNKNOWN:
+echo UNKNOWN SKILL
+goto LOOP
+
+DONE:
+

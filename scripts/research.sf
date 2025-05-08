@@ -1,0 +1,96 @@
+sap:
+put charge camb armband 30
+waitfor RoundTime
+pause
+put charge torq 30
+waitfor RoundTime
+pause
+put invoke camb armband
+waitfor RoundTime
+pause
+put invoke torq
+waitfor RoundTime
+pause
+
+put prep sap
+match cast1 You feel fully prepared to cast your spell
+match cast1 Your spell pattern snaps into shape with little preparation!
+matchwait
+
+cast1:
+pause
+put cast utility
+pause
+goto gaf
+
+gaf:
+put charge camb armband 30
+waitfor RoundTime
+pause
+put charge torq 30
+waitfor RoundTime
+pause
+put invoke camb armband
+waitfor RoundTime
+pause
+put invoke torq
+waitfor RoundTime
+pause
+
+put prep gaf 30
+match cast2 You feel fully prepared to cast your spell
+match cast2 Your spell pattern snaps into shape with little preparation!
+matchwait
+
+cast2:
+pause
+put cast
+pause
+goto fundamental1
+
+fundamental1:
+put research fundamental 300
+waitfor Breakthrough!
+pause
+goto augmentation
+
+augmentation:
+
+put research augmentation 300
+waitfor you make definite progress
+pause
+put research augmentation 300
+waitfor Breakthrough!
+pause
+goto warding
+
+warding:
+put research warding 300
+waitfor you make definite progress
+pause
+put research warding 300
+waitfor Breakthrough!
+pause
+goto fundamental2
+
+fundamental2:
+put research fundamental 300
+waitfor Breakthrough!
+pause
+goto utility
+
+utility:
+put research utility 300
+waitfor you make definite progress
+pause
+put research utility 300
+waitfor Breakthrough!
+pause
+goto stream
+
+stream:
+put research stream 300
+waitfor Breakthrough!
+pause
+
+echo *** Research Complete ***

@@ -1,0 +1,40 @@
+move e
+put go arch
+put go trail
+move se
+move d
+move d
+move nw
+move ne
+move ne
+move n
+move ne
+put go path
+move ne
+move e
+move n
+move ne
+move ne
+move e
+move se
+put go gate
+move e
+move e
+move e
+move e
+move e
+move e
+move e
+move e
+move e
+move s
+move s
+move s
+move s
+move s
+move s
+move se
+move sw
+put go gate
+move n
+put go door

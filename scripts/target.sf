@@ -1,0 +1,19 @@
+start:
+pause 1
+put target ae 20 %1
+match cast Your formation of a targeting pattern
+matchwait
+
+cast:
+put cast
+match castwait You close your eyes
+match rel Your pattern dissipates
+matchwait
+
+castwait:
+pause 10
+goto start
+
+rel:
+put rel
+goto start

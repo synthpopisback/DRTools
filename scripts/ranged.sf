@@ -1,0 +1,248 @@
+#==================================================================================
+#==================================================================================
+
+RANGED:
+
+   setvariable rangedweapon longbow
+   setvariable rangedammo arrow
+   setvariable rangedlooppoint RANGEDCHECKHANDS
+   setvariable backcontainer pack
+   setvariable ammocontainer quiver
+
+   RANGEDCHECKHANDS:
+
+      put glance
+
+      Match RANGEDLCROSSBOW crossbow in your right
+      Match RANGEDHCROSSBOW teak stock in your right
+      Match RANGEDSBOW shortbow in your right
+      Match RANGEDLBOW longbow in your right
+      MATCH RANGEDCBOW bowstring in your right
+      Match RANGEDSLING sling in your right
+      Matchre RANGEDCHECKINPUT /left hand|empty hands/
+      Matchwait
+
+   RANGEDCHECKINPUT:
+
+      if_1 setvariable rangedweapon %1% %2%
+      if_1 goto RANGEDGETWEAPON
+
+      setvariable rangedweapon INVALID INPUT
+      goto RANGEDNOINPUT
+
+   RANGEDGETWEAPON:
+
+      put stow left
+
+      put wield %rangedweapon%
+
+      Match RANGEDLCROSSBOW crossbow
+      Match RANGEDHCROSSBOW slurbow
+      Match RANGEDSBOW shortbow
+      Match RANGEDLBOW longbow
+      Match RANGEDCBOW composite bow
+      Match RANGEDSLING sling
+      Match RANGEDREMOVEWEAPON already in your inventory
+      Match RANGEDNOWEAPON referring to?
+      Matchwait
+
+   RANGEDREMOVEWEAPON:
+
+      put stow left
+
+      put remove %rangedweapon%
+
+      goto %rangedlooppoint%
+
+   RANGEDLCROSSBOW:
+
+      setvariable rangedweapon crossbow
+      setvariable rangedammo quadrel
+
+      goto RANGEDLOAD
+
+   RANGEDHCROSSBOW:
+
+      setvariable rangedweapon slurbow
+      setvariable rangedammo quadrel
+
+      goto RANGEDLOAD
+
+   RANGEDSBOW:
+
+      setvariable rangedweapon shortbow
+      setvariable rangedammo arrow
+
+      goto RANGEDLOAD
+
+   RANGEDLBOW:
+
+      setvariable rangedweapon longbow
+      setvariable rangedammo arrow
+
+      goto RANGEDLOAD
+
+   RANGEDCBOW:
+
+      setvariable rangedweapon bow
+      setvariable rangedammo arrow
+
+      goto RANGEDLOAD
+
+   RANGEDSLING:
+
+      setvariable rangedweapon sling
+      setvariable rangedammo rock
+
+      goto RANGEDLOAD
+
+   RANGEDLOAD:
+
+      setvariable rangedlooppoint RANGEDLOAD
+
+      put load my %rangedweapon% with %rangedammo% from %ammocontainer%
+
+      Match RANGEDPAUSEDELAY ...wait
+      Match RANGEDAIM Roundtime
+      Match RANGEDAIM already loaded
+      Match RANGEDNOAMMO don't have the proper ammunition
+      Matchwait
+
+   RANGEDAIM:
+
+      setvariable rangedlooppoint RANGEDAIM
+
+      put aim
+
+      Match RANGEDPAUSEDELAY ...wait
+      Match RANGEDFIRE You begin to target
+      Match RANGEDFIRE already targetting
+      Match RANGEDGATHERAMMO referring to.
+      Matchwait
+
+   RANGEDFIRE:
+
+      pause 5
+
+      setvariable rangedlooppoint RANGEDFIRE
+
+      put fire
+
+      Match RANGEDPAUSEDELAY ...wait
+      Match RANGEDLOAD You fire
+      Match RANGEDUNLOADWEAPON referring to.
+      Matchwait
+
+   RANGEDUNLOADWEAPON:
+
+      setvariable rangedlooppoint RANGEDUNLOADWEAPON
+
+      put unload
+
+      Match RANGEDPAUSEDELAY ...wait
+      Match RANGEDSTOWALL Roundtime
+      Matchwait
+
+   RANGEDSTOWALL:
+
+      pause
+
+      put put %rangedammo% in %ammocontainer%
+      put put %rangedweapon% in %backcontainer%
+
+      goto RANGEDGATHERAMMO
+
+   RANGEDSTOWAMMO:
+
+      put put %rangedammo% in %ammocontainer%
+
+      Match RANGEDSTOWAMMO ...wait
+      Match %rangedlooppoint% You put your
+      Matchwait
+
+   RANGEDSTOWAMMOPAUSE:
+
+      pause
+
+      put put %rangedammo% in %ammocontainer%
+
+      Match RANGEDSTOWAMMO ...wait
+      Match %rangedlooppoint% You put your
+      Matchwait
+
+   RANGEDGATHERAMMO:
+
+      setvariable rangedlooppoint RANGEDGATHERAMMO
+
+      put get %rangedammo%
+
+      Matchre RANGEDSTOWAMMOPAUSE /You pull|You pick up/
+      Match RANGEDFINISHED You get
+      Match RANGEDRESETLOOP You must unload
+      Matchwait
+
+   RANGEDRESETLOOP:
+
+      setvariable rangedlooppoint RANGEDAIM
+
+      goto RANGEDAWAITTARGETS
+
+   RANGEDFINISHED:
+
+      setvariable rangedlooppoint RANGEDAIM
+
+      goto RANGEDSTOWAMMO
+
+   RANGEDNOWEAPON:
+
+      echo ==================================================================
+      echo * You do not have this type of weapon (%rangedweapon%) available *
+      echo ==================================================================
+
+      goto RANGEDEXIT
+
+   RANGEDNOINPUT:
+
+      echo ================================================================
+      echo * You are not holding a weapon and have not made a valid entry *
+      echo * at the beginning of the script (%rangedweapon%)              *
+      echo ================================================================
+
+      goto RANGEDEXIT
+
+   RANGEDNOAMMO:
+
+      echo ==================================================================
+      echo * You do not have the correct ammunition (%rangedammo%) for your *
+      echo * selected weapon (%rangedweapon%). Get some %rangedammo%s or    *
+      echo * open the container holding them in order to start this script  *
+      echo ==================================================================
+
+      goto RANGEDEXIT
+
+   RANGEDPAUSEDELAY:
+
+      pause
+
+      goto %rangedlooppoint%
+
+   RANGEDAWAITTARGETS:
+
+      Matchre %rangedlooppoint% /on you|at you|closing steadily|pole weapon|melee range|rock troll|barghest|sprite/
+      Matchwait    
+
+   RANGEDEXIT:
+
+      deletevariable rangedweapon
+
+      deletevariable rangedammo
+
+      deletevariable rangedlooppoint
+      deletevariable backcontainer
+      deletevariable ammocontainer
+
+      goto NEXTFUNCTION
+
+#end RANGED function (THIS FUNCTION HAS BEEN FIXED)
+#==================================================================================
+#==================================================================================

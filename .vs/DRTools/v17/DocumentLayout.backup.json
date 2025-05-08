@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\scripts\\locks.sf||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\locks.sf||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\scripts\\gem.sf||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\gem.sf||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\scripts\\ffavor.sf||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\ffavor.sf||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\scripts\\favor.sf||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\favor.sf||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\buff.sf||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:buff.sf||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\analyze.sf||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:analyze.sf||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\app.sf||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app.sf||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\tdp.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tdp.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -27,6 +55,97 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "locks.sf",
+              "DocumentMoniker": "C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\scripts\\locks.sf",
+              "RelativeDocumentMoniker": "scripts\\locks.sf",
+              "ToolTip": "C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\scripts\\locks.sf",
+              "RelativeToolTip": "scripts\\locks.sf",
+              "ViewState": "AgIAAAEHAAAAAAAAAAAkwCkHAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-08T00:57:31.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "gem.sf",
+              "DocumentMoniker": "C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\scripts\\gem.sf",
+              "RelativeDocumentMoniker": "scripts\\gem.sf",
+              "ToolTip": "C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\scripts\\gem.sf",
+              "RelativeToolTip": "scripts\\gem.sf",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-08T00:57:06.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ffavor.sf",
+              "DocumentMoniker": "C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\scripts\\ffavor.sf",
+              "RelativeDocumentMoniker": "scripts\\ffavor.sf",
+              "ToolTip": "C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\scripts\\ffavor.sf",
+              "RelativeToolTip": "scripts\\ffavor.sf",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-08T00:56:26.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "favor.sf",
+              "DocumentMoniker": "C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\scripts\\favor.sf",
+              "RelativeDocumentMoniker": "scripts\\favor.sf",
+              "ToolTip": "C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\scripts\\favor.sf",
+              "RelativeToolTip": "scripts\\favor.sf",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-08T00:55:41.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "buff.sf",
+              "DocumentMoniker": "C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\buff.sf",
+              "RelativeDocumentMoniker": "buff.sf",
+              "ToolTip": "C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\buff.sf",
+              "RelativeToolTip": "buff.sf",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-08T00:54:05.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "analyze.sf",
+              "DocumentMoniker": "C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\analyze.sf",
+              "RelativeDocumentMoniker": "analyze.sf",
+              "ToolTip": "C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\analyze.sf",
+              "RelativeToolTip": "analyze.sf",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAAAHQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-08T00:53:26.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "app.sf",
+              "DocumentMoniker": "C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\app.sf",
+              "RelativeDocumentMoniker": "app.sf",
+              "ToolTip": "C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\app.sf",
+              "RelativeToolTip": "app.sf",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-08T00:51:41.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "tdp.html",
               "DocumentMoniker": "C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\tdp.html",
               "RelativeDocumentMoniker": "tdp.html",
@@ -39,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "circle.html",
               "DocumentMoniker": "C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\circle.html",
               "RelativeDocumentMoniker": "circle.html",
@@ -52,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Dropbox\\Private\\Hosting Stuff\\Github Repositories\\DRTools\\index.html",
               "RelativeDocumentMoniker": "index.html",

@@ -1,0 +1,15 @@
+put prep pfe 30
+put charge my camb armband 20
+waitfor roundtime
+pause
+put invoke my camb armband
+waitfor roundtime
+pause
+waitfor You feel fully prepared to cast your spell
+pause
+put cast
+pause
+
+put perc
+
+end:

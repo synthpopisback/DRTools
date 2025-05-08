@@ -1,0 +1,40 @@
+put go door
+move s
+put go gate
+move ne
+move nw
+move n
+move n
+move n
+move n
+move n
+move n
+move w
+move w
+move w
+move w
+put go bridge
+move w
+move w
+move w
+move w
+put go gate
+move nw
+move w
+move sw
+move sw
+move s
+move w
+move sw
+put go path
+move sw
+move s
+move sw
+move sw
+move se
+move up
+move up
+move nw
+put go trail
+put go arch
+put go stone

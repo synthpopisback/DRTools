@@ -1,0 +1,28 @@
+start:
+put app my quiv careful
+waitfor RoundTime
+pause
+
+put wield my sword
+pause
+put app my sword careful
+waitfor RoundTime
+pause
+put sheath my sword in my spidersilk sheath
+
+put get black pouch from my pack
+put open my black pouch
+pause
+put app my black pouch careful
+waitfor RoundTime
+pause
+put close my black pouch
+put stow my black pouch
+pause
+
+put exp appraisal
+match start exp help
+match end (33/34)
+match end (34/34)
+matchwait
+end:

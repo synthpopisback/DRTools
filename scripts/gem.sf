@@ -1,0 +1,11 @@
+put get my %1 pouch from my pack
+put open my %1 pouch
+pause
+put fill my %1 pouch with my pack
+put app my %1 pouch careful
+waitfor RoundTime
+pause
+put close my %1 pouch
+put count my %1 pouch
+pause
+put put my %1 pouch in my pack

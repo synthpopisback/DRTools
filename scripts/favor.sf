@@ -1,0 +1,89 @@
+#Favor puzzle
+
+put pray
+put pray
+pause
+put pray
+pause
+put pray
+pause
+put pray
+pause
+put say truffenyi
+pause
+put stand
+put get orb
+
+GOARCH:
+pause
+match DONE You feel giddy all over
+match JUG jug
+match TINDERS tinders
+match SPONGE sponge
+match WINDOW directly opposite an ancient window.
+match GOARCH ...wait
+put go arch
+matchwait
+
+JUG:
+pause
+put fill font with jug
+goto LEAVEROOM
+
+TINDERS:
+pause
+put light candle with tinders
+goto LEAVEROOM
+
+SPONGE:
+pause
+put clean altar with sponge
+goto LEAVEROOM
+
+WINDOW:
+pause
+put open window
+pause
+put open window
+pause
+put open window
+pause
+put open window
+pause
+put open window
+pause
+put open window
+pause
+put open window
+pause
+put open window
+pause
+goto LEAVEROOM
+
+LEAVEROOM:
+put go stair
+pause
+match DONE You feel giddy all over
+match JUG jug
+match TINDERS tinders
+match SPONGE sponge
+match WINDOW directly opposite an ancient window.
+match LOOK It would be difficult to go through the door
+match LEAVEROOM ...wait
+put go door
+put go window
+matchwait
+
+LOOK:
+pause
+match JUG jug
+match TINDERS tinders
+match SPONGE sponge
+match WINDOW directly opposite an ancient window.
+put look
+matchwait
+
+DONE:
+pause
+put StOW my orb
+EXIT

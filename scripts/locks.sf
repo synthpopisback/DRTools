@@ -1,0 +1,1833 @@
+# You may wish to set a container within which you keep your lockpick.
+# This is found under the label “PutAwayLockpick”.
+# The script assumes you are using a case or a ring,
+# but will work with or without those things.
+#
+# Within the looting portion of the script you may designate specific containers
+# for various kinds of objects (random things, gems, herbs, etc).
+# You may change how you loot these objects within the bottom-most portion
+# of this script.
+#
+# It is critical that you have utilized the STORE verb.
+# If you haven’t already, please set the container for “STORE GEM”
+#
+#NECESSARY VARIABLE SETTINGS
+#
+# ----- EXPVerification ----- add a “yes” or “no” after the X below.
+setvariable X yes
+#
+# ----- PackCheck ----- add the container your boxes are in after the P below.
+ setvariable P pack
+#
+# ----- ArmorStash ----- add the container that you want to put your armor in
+ setvariable Z pack
+#
+#------ DismantleHarvest --- determines if, after picking the lock, you wish to harvest
+#---------------------------------- the trap or not.  Must be set manually at the beginning
+#---------------------------------- of the script.  Options are NO or YES
+setvariable H no
+
+#END VARIABLE SETTINGS  -  Script starts below:
+
+goto BoxesIn%P
+
+BoxesIn:
+BoxesInMyBoxContainer:
+echo
+echo
+echo **********************************
+echo ***  LOOK inside your BOX CONTAINER
+echo ***  
+echo ***  To skip this prompt in the future you may
+echo ***  make this a fixed setting at the top of the script
+echo ***********************************
+echo
+match BoxesInHaversack haversack
+match BoxesInBackpack backpack
+match BoxesInPack  pack
+match BoxesInGearbag gearbag
+match BoxesInSatchel satchel
+match BoxesInHarness harness
+match BoxesInSidebag sidebag
+match BoxesInRucksack rucksack
+match BoxesInTote tote
+match BoxesInCarryall carryall
+match BoxesInBaldric baldric
+match BoxesInBag  bag
+match BoxesInDuffel silk duffel
+match BoxesInBacksheath backsheath
+match BoxesInKnapsack knapsack
+match BoxesInSack sack
+match BoxesInKeg keg
+match BoxesInGameBag game-bag
+match BoxesInBasket basket
+matchwait
+
+BoxesInDuf:
+BoxesInDuff:
+BoxesInDuffe:
+BoxesInDuffel:
+setvariable P duffel
+goto ArmorIn%Z
+
+BoxesInBacksheath:
+BoxesInBacksheat:
+BoxesInBackshea:
+BoxesInBackshe:
+BoxesInBacksh:
+BoxesInBacks:
+setvariable P backsheath
+goto ArmorIn%Z
+
+BoxesInKnapsack:
+BoxesInKnapsac:
+BoxesInKnapsa:
+BoxesInKnaps:
+BoxesInKnap:
+BoxesInKna:
+setvariable P knapsack
+goto ArmorIn%Z
+
+BoxesInSack:
+BoxesInSac:
+setvariable P sack
+goto ArmorIn%Z
+
+BoxesInKeg:
+setvariable P  keg
+goto ArmorIn%Z
+
+BoxesInGameBag:
+BoxesInGameBa:
+BoxesInGameB:
+BoxesInGame:
+BoxesInGam:
+setvariable P game
+goto ArmorIn%Z
+
+BoxesInBasket:
+BoxesInBaske:
+BoxesInBask:
+BoxesInBas:
+setvariable P basket
+goto ArmorIn%Z
+
+BoxesInHav:
+BoxesInHave:
+BoxesInHaver:
+BoxesInHavers:
+BoxesInHaversa:
+BoxesInHaversac:
+BoxesInHaversack:
+setvariable P haversack
+goto ArmorIn%Z
+
+BoxesInPac:
+BoxesInPack:
+setvariable P pack
+goto ArmorIn%Z
+
+BoxesInBag:
+setvariable P bag
+goto ArmorIn%Z
+
+BoxesInGea:
+BoxesInGear:
+BoxesInGearb:
+BoxesInGearba:
+BoxesInGearbag:
+setvariable P gearbag
+goto ArmorIn%Z
+
+BoxesInBac:
+BoxesInBack:
+BoxesInBackp:
+BoxesInBackpa:
+BoxesInBackpac:
+BoxesInBackpack:
+setvariable P backpack
+goto ArmorIn%Z
+
+BoxesInSat:
+BoxesInSatche:
+BoxesInSatch:
+BoxesInSatc:
+BoxesInSatchel:
+setvariable P satchel
+goto ArmorIn%Z
+
+BoxesInHar:
+BoxesInHarnes:
+BoxesInHarne:
+BoxesInHarn:
+BoxesInHarness:
+setvariable P harness
+goto ArmorIn%Z
+
+BoxesInSid:
+BoxesInSideba:
+BoxesInSideb:
+BoxesInSide:
+BoxesInSidebag:
+setvariable P sidebag
+goto ArmorIn%Z
+
+BoxesInRuc:
+BoxesInRucksac:
+BoxesInRucksa:
+BoxesInRucks:
+BoxesInRuck:
+BoxesInRucksack:
+setvariable P rucksack
+goto ArmorIn%Z
+
+BoxesInTote:
+BoxesInTot:
+setvariable P tote
+goto ArmorIn%Z
+
+BoxesInCarryall:
+BoxesInCarryal:
+BoxesInCarrya:
+BoxesInCarry:
+BoxesInCarr:
+BoxesInCar:
+setvariable P carryall
+goto ArmorIn%Z
+
+BoxesInBaldric:
+BoxesInBaldri:
+BoxesInBaldr:
+BoxesInBald:
+BoxesInBal:
+setvariable P baldric
+goto ArmorIn%Z
+
+ArmorIn:
+ArmorInMyArmorContainer:
+pause 1
+echo
+echo
+echo **********************************
+echo ***  LOOK inside your ARMOR CONTAINER
+echo ***  
+echo ***  To skip this prompt in the future you may
+echo ***  make this a fixed setting at the top of the script
+echo ***********************************
+echo
+match ArmorInHaversack haversack
+match ArmorInBackpack backpack
+match ArmorInPack  pack
+match ArmorInGearbag gearbag
+match ArmorInSatchel satchel
+match ArmorInHarness harness
+match ArmorInSidebag sidebag
+match ArmorInRucksack rucksack
+match ArmorInTote tote
+match ArmorInCarryall carryall
+match ArmorInBaldric baldric
+match ArmorInBag  bag
+match ArmorInDuffel silk duffel
+match ArmorInBacksheath backsheath
+match ArmorInKnapsack knapsack
+match ArmorInSack sack
+match ArmorInKeg keg
+match ArmorInGameBag game-bag
+match ArmorInBasket basket
+matchwait
+
+ArmorInDuf:
+ArmorInDuff:
+ArmorInDuffe:
+ArmorInDuffel:
+setvariable Z duffel
+goto RemArmor
+
+ArmorInBacksheath:
+ArmorInBacksheat:
+ArmorInBackshea:
+ArmorInBackshe:
+ArmorInBacksh:
+ArmorInBacks:
+setvariable Z backsheath
+goto RemArmor
+
+ArmorInKnapsack:
+ArmorInKnapsac:
+ArmorInKnapsa:
+ArmorInKnaps:
+ArmorInKnap:
+ArmorInKna:
+setvariable Z knapsack
+goto RemArmor
+
+ArmorInSack:
+ArmorInSac:
+setvariable Z sack
+goto RemArmor
+
+ArmorInKeg:
+setvariable Z  keg
+goto RemArmor
+
+ArmorInGameBag:
+ArmorInGameBa:
+ArmorInGameB:
+ArmorInGame:
+ArmorInGam:
+setvariable Z game
+goto RemArmor
+
+ArmorInBasket:
+ArmorInBaske:
+ArmorInBask:
+ArmorInBas:
+setvariable Z basket
+goto RemArmor
+
+ArmorInHav:
+ArmorInHave:
+ArmorInHaver:
+ArmorInHavers:
+ArmorInHaversa:
+ArmorInHaversac:
+ArmorInHaversack:
+setvariable Z haversack
+goto RemArmor
+
+ArmorInPac:
+ArmorInPack:
+setvariable Z pack
+goto RemArmor
+
+ArmorInBag:
+setvariable Z bag
+goto RemArmor
+
+ArmorInGea:
+ArmorInGear:
+ArmorInGearb:
+ArmorInGearba:
+ArmorInGearbag:
+setvariable Z gearbag
+goto RemArmor
+
+ArmorInBac:
+ArmorInBack:
+ArmorInBackp:
+ArmorInBackpa:
+ArmorInBackpac:
+ArmorInBackpack:
+setvariable Z backpack
+goto RemArmor
+
+ArmorInSatchel:
+ArmorInSatche:
+ArmorInSatch:
+ArmorInSatc:
+ArmorInSat:
+setvariable Z satchel
+goto RemArmor
+
+ArmorInHarness:
+ArmorInHarnes:
+ArmorInHarne:
+ArmorInHarn:
+ArmorInHar:
+setvariable Z harness
+goto RemArmor
+
+ArmorInSidebag:
+ArmorInSideba:
+ArmorInSideb:
+ArmorInSide:
+ArmorInSid:
+setvariable Z sidebag
+goto RemArmor
+
+ArmorInRucksack:
+ArmorInRucksac:
+ArmorInRucksa:
+ArmorInRucks:
+ArmorInRuck:
+ArmorInRuc:
+setvariable Z rucksack
+goto RemArmor
+
+ArmorInTote:
+ArmorInTot:
+setvariable Z tote
+goto RemArmor
+
+ArmorInCarryall:
+ArmorInCarryal:
+ArmorInCarrya:
+ArmorInCarry:
+ArmorInCarr:
+ArmorInCar:
+setvariable Z carryall
+goto RemArmor
+
+ArmorInBaldric:
+ArmorInBaldri:
+ArmorInBaldr:
+ArmorInBald:
+ArmorInBal:
+setvariable Z baldric
+goto RemArmor
+
+RemArmor:
+put inv armor
+match RemGlove gloves
+match RemGaunt gauntlet
+match RemSleeves sleeves
+match RemVamb vambraces
+match RemCap cap
+match RemHelm helm
+match RemBala balaclav
+match RemArmet armet
+match RemMorion morion
+match RemBascinet bascinet
+match RemBarbute barbute
+match RemMask mask
+match RemCowl cowl
+match RemHood hood
+match RemBackplate backplate
+match RemFauld fauld
+match RemLeatherArmor black armor
+match RemBreastplate breastplate
+match RemCuirass cuirass
+match RemPlate field plate
+match RemPlate half plate
+match RemPlate full plate
+match RemPlate fluted plate
+match RemTabard tabard
+match RemAvent aventail
+match RemMant mantle
+match RemTasset tasset
+match RemShield shield
+match RemTarge targe
+match RemSipar sipar
+match RemBuckler buckler
+match RemAegis aegis
+match RemVest vest
+match RemLorica lorica
+match RemShirt shirt
+match RemJerkin jerkin
+match RemCoat coat
+match RemLeath leathers
+match RemHaub hauberk
+match RemRobe robe
+match RemGreav greaves
+match RemLeatherArmor leather armor
+match GlanceForBox wearing anything like
+matchwait
+
+Remove:
+put remove my %s
+put put my %s in my %Z
+waitfor You put
+goto RemArmor
+
+# HEAD, EYE and NECK armor designations for removal
+RemHelm:
+save helm
+goto Remove
+
+RemBala:
+save balac
+goto Remove
+
+RemCap:
+save cap
+goto Remove
+
+RemArmet:
+save armet
+goto Remove
+
+RemHood:
+save hood
+goto Remove
+
+RemMorion:
+save morion
+goto Remove
+
+RemBascinet:
+save bascinet
+goto Remove
+
+RemBarbute:
+save barbute
+goto Remove
+
+RemMask:
+save mask
+goto Remove
+
+RemCowl:
+save cowl
+goto Remove
+
+RemTasset:
+save tasset
+goto Remove
+
+RemMant:
+save mantl
+goto Remove
+
+RemAvent:
+save aventail
+goto Remove
+
+# CHEST, BACK, and ABDOMEN armor designated for removal
+RemBackplate:
+save backplate
+goto Remove
+
+RemTabard:
+save tabard
+goto Remove
+
+RemFauld:
+save fauld
+goto Remove
+
+RemBreastplate:
+save breastplate
+goto Remove
+
+RemCuirass:
+save cuirass
+goto Remove
+
+RemPlate:
+save field plate
+goto Remove
+
+RemRobe:
+save robe
+goto Remove
+
+RemLeatherArmor:
+save armor
+goto Remove
+
+RemLorica:
+save lorica
+goto Remove
+
+RemVest:
+save vest
+goto Remove
+
+RemShirt:
+save shirt
+goto Remove
+
+RemCoat:
+save coat
+goto Remove
+
+RemJerkin:
+save jerkin
+goto Remove
+
+RemLeath:
+save leathers
+goto Remove
+
+RemHaub:
+save hauberk
+goto Remove
+
+# SHIELDS designated for removal
+RemSipar:
+save sipar
+goto Remove
+
+RemBuckler:
+save buckler
+goto Remove
+
+RemAegis:
+save aegis
+goto Remove
+
+RemShield:
+save shield
+goto Remove
+
+RemTarge:
+save targe
+goto Remove
+
+# HAND and ARM armor designated for removal
+RemSleeves:
+save sleeves
+goto Remove
+
+RemGlove:
+save glove
+goto Remove
+
+RemGaunt:
+save gaunt
+goto Remove
+
+RemVamb:
+save vambr
+goto Remove
+
+#LEG armor designated for removal
+RemGreav:
+save greav
+goto Remove
+
+
+GlanceForBox:
+pause 1
+put glance
+match TrunkGlance trunk
+match ChestGlance chest
+match StrongboxGlance strongbox
+match CrateGlance crate
+match CofferGlance coffer
+match CasketGlance casket
+match CaddyGlance caddy
+match SkippetGlance skippet
+match BoxGlance box
+match LookForBox empty hands
+matchwait
+
+TrunkGlance:
+setvariable B trunk
+goto DisarmIdent
+
+ChestGlance:
+setvariable B chest
+goto DisarmIdent
+
+StrongboxGlance:
+setvariable B strongbox
+goto DisarmIdent
+
+CrateGlance:
+setvariable B crate
+goto DisarmIdent
+
+CofferGlance:
+setvariable B coffer
+goto DisarmIdent
+
+CasketGlance:
+setvariable B casket
+goto DisarmIdent
+
+CaddyGlance:
+setvariable B caddy
+goto DisarmIdent
+
+SkippetGlance:
+setvariable B skippet
+goto DisarmIdent
+
+BoxGlance:
+setvariable B box
+goto DisarmIdent
+
+LookForBox:
+pause 1
+put look in my %P
+match Trunk trunk
+match Chest chest
+match Strongbox strongbox
+match Crate crate
+match Coffer coffer
+match Casket casket
+match Caddy caddy
+match Skippet skippet
+match Box box
+match Done and some
+match Done and a
+match Done nothing in there
+matchwait
+
+Trunk:
+setvariable B trunk
+goto GetBox
+
+Chest:
+setvariable B chest
+goto GetBox
+
+Crate:
+setvariable B crate
+goto GetBox
+
+Strongbox:
+setvariable B strongbox
+goto GetBox
+
+Coffer:
+setvariable B coffer
+goto GetBox
+
+Casket:
+setvariable B casket
+goto GetBox
+
+Caddy:
+setvariable B caddy
+goto GetBox
+
+Skippet:
+setvariable B skippet
+goto GetBox
+
+Box:
+setvariable B box
+goto GetBox
+
+GetBox:
+put get %B from my %P
+match DisarmIdent You get a
+match DisarmIdent already holding
+matchwait
+
+DisarmIdent:
+match GetPick looks safe enough
+match GetPick quite safe
+match GetPick blocking whatever
+match GetPick harmless
+match GetPick there used to be something
+match GetPick been pried away
+match GetPick small deflated bladder
+match GetPick have been bent
+match GetPick the trap is no longer a danger
+match GetPick liquid was drained out
+match GetPick broken spring is sticking out
+match DisarmQuick a simple matter
+match DisarmQuick aged grandmother
+match DisarmQuick trivially constructed
+match DisarmQuick laughable matter
+match DisarmNormal should not take long
+match DisarmNormal only minor troubles
+match DisarmNormal precisely at your
+match DisarmNormal some chance
+match DisarmCareful would be a longshot
+match DisarmCareful has the edge
+match DisarmCareful odds are against
+match DisarmCareful would be a long shot
+match DisarmReally Prayer would be
+match DisarmReally amazingly minimal
+match DisarmReally have any chance
+match DisarmReally snowball does
+match DisarmReally jump off a cliff
+match DisarmReally snowball encased in
+match DisarmIdent fails to reveal
+match DisarmIdent something to shift
+match DisarmIdent not yet fully disarmed
+pause 1
+put glance my %B
+put disarm my %B ident
+matchwait
+
+DisarmReally:
+pause 1
+echo
+echo **************************
+echo
+echo *** This trap is extremely dangerous ***
+echo *** If you insist on it, NOD now ***
+echo
+echo **************************
+echo
+waitfor You nod
+goto DisarmCareful
+
+DisarmQuick:
+counter set 0
+save quick
+pause 1
+goto Disarm%c
+
+DisarmCareful:
+counter set 0
+save careful
+pause 1
+goto Disarm%c
+
+DisarmNormal:
+counter set 0
+save  
+pause 1
+goto Disarm%c
+
+Disarm3:
+goto DisarmCareful
+Disarm2:
+Disarm1:
+Disarm0:
+counter add 1
+pause 1
+put disarm my %B %s
+match GetPick quite safe
+match GetPick looks safe enough
+match DisarmAnalyze yet fully disarmed
+match DisarmIdent the crystal hits
+match DisarmCareful something to shift
+match DisarmCareful proves too difficult
+match Disarm%c unable to make
+match DisarmIdent Roundtime
+matchwait
+
+GetPick:
+pause 1
+put get my lockpick
+goto PickIdent
+
+PickIdent:
+counter set 0
+goto PickIdent0
+
+PickIdent3:
+goto PickCareful
+PickIdent2:
+PickIdent1:
+PickIdent0:
+pause 1
+counter add 1
+put glance my %B
+put pick my %B ident
+match OpenBox not even locked
+match PickIdent%c fails to teach you
+match PickIdent%c something to shift
+match PickQuick a simple matter
+match PickQuick an aged grandmother
+match PickQuick trivially constructed
+match PickQuick laughable matter
+match PickQuick should not take long
+match PickQuick only minor troubles
+match GetPick Find a more appropriate tool
+match Pick precisely at your
+match Pick some chance
+match Pick has the edge
+match PickCareful would be a longshot
+match PickCareful odds are against
+match PickCareful Prayer would be a good start
+matchwait
+
+PickQuick:
+save quick
+pause 1
+goto Pick0
+
+Pick:
+save   
+goto Pick0
+
+Pick4:
+goto PickCareful
+Pick3:
+Pick2:
+Pick1:
+Pick0:
+counter add 1
+pause 1
+put pick my %B %s
+match PickIdent You discover another
+match Pick%c You are unable
+match GetPick just broke
+match GetPick Find a more appropriate tool
+match OpenBox not even locked
+match OpenBox Roundtime
+matchwait
+
+PickCareful:
+counter set 0
+save careful
+goto Pick0
+
+OpenBox:
+pause 1
+put open my %B
+match PutAwayLockpick is already open
+match GetPick It is locked
+match PutAwayLockpick You open
+matchwait
+
+PutAwayLockpick:
+put stow my lockpick
+goto LootCoin
+
+LootCoin:
+put get my coin
+put get my coin
+match LootCoin …wait
+match LootBox What were you referring to
+match LootCoin You pick up
+matchwait
+
+LootBox:
+match DismantleBox You find nothing
+match LootCoin coin
+match LootCoin coins
+match Alexandrite alexandrite
+match Agate agate
+match Amber piece of amber
+match Amethyst amethyst
+match Andalus andalusite
+match Aqua aquamarine
+match Bar bronze bar
+match Bar silver bar
+match Bar gold bar
+match Bar brass bar
+match Bar steel bar
+match Bar pewter bar
+match Bloodstone bloodstone
+match Carnelian carnelian
+match Card card
+match Chalcedony chalcedony
+match Chryso chrysoberyl
+match Citrine citrine
+match Chryso chrysoprase
+match Coral of coral
+match Crystal crystal
+match Diamond diamond
+match Diopside diopside
+match Emerald emerald
+match Flint flint
+match Flower flower
+match Garnet garnet
+match Glue glue
+match Hemat hematite
+match Nugget iron nugget
+match Ivory piece of ivory
+match Iolite iolite
+match Jade jade
+match Kunzite kunzite
+match Lazuli lazuli
+match Lockpick lockpick
+match Moonstone moonstone
+match Morgan morganite
+match Nugget nugget
+match Onyx onyx
+match Opal opal
+match Pearl pearl
+match Peridot peridot
+match Quartz quartz
+match Ruby ruby
+match Rune runestone
+match Sap muljin sap
+match Sap sufil sap
+match Sapphire sapphire
+match GwethKeep jadeite stones
+match GwethKeep kyanite stones
+match Gweth stones
+match Spinel spinel
+match StarStone star-stone
+match Sun sunstone
+match Tanz tanzanite
+match Topaz topaz
+match Tourm tourmaline
+match Tsavo tsavorite
+match Turq turquoise
+match Zircon zircon
+match Dira dira
+match Beryl beryl
+match Root root
+match Grass grass
+match Nugget nugget
+match Stem stem
+match Lotion lotion
+match Thread thread
+match Oil flask of oil
+match Leaves leaves
+match Pestle pestle
+match Mortar mortar
+match Needle needle
+match Sufil sufil sap
+match Label wax label
+match Hair hairbrush
+match Rope lead rope
+match Necklace necklace
+match DismantleBox nothing in there
+pause 1
+put look in my %B
+matchwait
+
+
+StowGem:
+put get my %G from my %B
+put stow %G
+match LootBox you put
+match NeedNewGemContainer got a wealth of gems
+matchwait
+
+NeedNewGemContainer:
+echo
+echo ************************
+echo
+echo *** Current gem container full ***
+echo *** Please obtain and set a new ***
+echo *** gem container upon doing so ***
+echo *** NOD when ready. ***
+echo
+waitfor You nod
+goto StowGem
+
+# Gem storage
+# and Gems to be looted
+
+Agate:
+setvariable G agate
+goto StowGem
+
+Amethyst:
+setvariable G amethyst
+goto StowGem
+
+Alexandrite:
+setvariable G alexandrite
+goto StowGem
+
+Amber:
+setvariable G amber
+goto StowGem
+
+Andalus:
+setvariable G andalus
+goto StowGem
+
+Aqua:
+setvariable G aqua
+goto StowGem
+
+Bloodstone:
+setvariable G bloodstone
+goto StowGem
+
+Beryl:
+setvariable G beryl
+goto StowGem
+
+Carnelian:
+setvariable G carnelian
+goto StowGem
+
+Chalcedony:
+setvariable G chalcedony
+goto StowGem
+
+Chryso:
+setvariable G chryso
+goto StowGem
+
+Citrine:
+setvariable G citrine
+goto StowGem
+
+Coral:
+setvariable G coral
+goto StowGem
+
+Crystal:
+setvariable G crystal
+goto StowGem
+
+Diamond:
+setvariable G diamond
+goto StowGem
+
+Diopside:
+setvariable G diopside
+goto StowGem
+
+Emerald:
+setvariable G emerald
+goto StowGem
+
+Garnet:
+setvariable G garnet
+goto StowGem
+
+Hemat:
+setvariable G hemat
+goto StowGem
+
+Iolite:
+setvariable G iolite
+goto StowGem
+
+Ivory:
+setvariable G ivory
+goto StowGem
+
+Jade:
+setvariable G jade
+goto StowGem
+
+Kunzite:
+setvariable G kunzite
+goto StowGem
+
+Lazuli:
+setvariable G lazuli
+goto StowGem
+
+Moonstone:
+setvariable G moonstone
+goto StowGem
+
+Morgan:
+setvariable G morgani
+goto StowGem
+
+Onyx:
+setvariable G onyx
+goto StowGem
+
+Opal:
+setvariable G opal
+goto StowGem
+
+Pearl:
+setvariable G pearl
+goto StowGem
+
+Peridot:
+setvariable G peridot
+goto StowGem
+
+Quartz:
+setvariable G quartz
+goto StowGem
+
+Ruby:
+setvariable G ruby
+goto StowGem
+
+Sapphire:
+setvariable G sapphire
+goto StowGem
+
+StarStone:
+setvariable G star
+goto StowGem
+
+Spinel:
+setvariable G spinel
+goto StowGem
+
+Sun:
+setvariable G sunston
+goto StowGem
+
+Tanz:
+setvariable G tanzanite
+goto StowGem
+
+Topaz:
+setvariable G topaz
+goto StowGem
+
+Tourm:
+setvariable G tourm
+goto StowGem
+
+Tsavo:
+setvariable G tsavo
+goto StowGem
+
+Turq:
+setvariable G turq
+goto StowGem
+
+Zircon:
+setvariable G zircon
+goto StowGem
+
+# Random Stuff to be DROPPED
+# This stuff is considered useless
+
+Rope:
+put get rope from my %B
+put drop my rope
+goto LootBox
+
+Hair:
+put get hair from my %B
+put drop my hair
+goto LootBox
+
+Label:
+put get label from my %B
+put drop my label
+goto LootBox
+
+Thread:
+put get thread from my %B
+put drop my thread
+goto LootBox
+
+Oil:
+put get oil from my %B
+put drop my oil
+goto LootBox
+
+Glue:
+put get glue from my %B
+put drop my glue
+goto LootBox
+
+Flint:
+put get flint from my %B
+put drop my flint
+goto LootBox
+
+Pestle:
+put get my pestle from my %B
+put drop my pestl
+goto LootBox
+
+Mortar:
+put get my mortar from my %B
+put drop my mortar
+goto LootBox
+
+Needle:
+put get my needl from my %B
+put drop my needle
+goto LootBox
+
+
+#  Random Stuff to be STOWED
+#  This goes into your basic STOW container except the Kyanite and Jadeite
+
+GwethKeep:
+put get stone from my %B
+put put my stone in my %P
+goto LootBox
+
+Bar:
+put get my bar from my %B
+put stow my bar
+goto LootBox
+
+Card:
+put get my card from my %B
+put stow my card
+goto LootBox
+
+Dira:
+put get my dira from my %B
+put stow my dira
+goto LootBox
+
+Gweth:
+put get my stones from my %B
+put stow my stones
+goto LootBox
+
+Lotion:
+put get my lotion from my %B
+put stow my lotion
+goto LootBox
+
+Lockpick:
+put get my lockp from my %B
+put stow my lockp
+goto LootBox
+
+Necklace:
+put get necklace from my %B
+put stow my necklace
+goto LootBox
+
+Nugget:
+put get nugget from my %B
+put stow my nugget
+goto LootBox
+
+Rune:
+put get my runest from my %B
+put stow my runest
+goto LootBox
+
+
+# This stuff is put in the SAME CONTAINER THAT YOUR BOXES ARE IN
+# These are HERBS that need to be worked by an alchemist first in order to become useful
+
+Sap:
+put get sap from my %B
+put put my sap in my %P
+goto LootBox
+
+Flower:	
+put get flower from my %B
+put put my flower in my %P
+goto LootBox
+
+Grass:
+put get my grass from my %B
+put put my grass in my %P
+goto LootBox
+
+Leaves:
+put get my leaves from my %B
+put put my leaves in my %P
+goto LootBox
+
+Root:
+put get my root from my %B
+put put my root in my %P
+goto LootBox
+
+Stem:
+put get my stem from my %B
+put put my stem in my %P
+goto LootBox
+
+Sufil:
+put get my sufil sap from my %B
+put put my sufil sap in my %P
+goto LootBox
+
+DisarmAnalyze:
+goto DisarmAnalyze%H
+
+DisarmAnalyzeYes:
+counter set 0
+goto AnalyzeTrap
+
+DisarmAnalyzeNo:
+goto DisarmIdent
+
+AnalyzeTrap:
+AnalyzeTrap0:
+AnalyzeTrap1:
+AnalyzeTrap2:
+AnalyzeTrap3:
+AnalyzeTrap4:
+counter add 1
+put disarm %B analyze
+match HarvestTrap already analyzed this trap
+match AnalyzeTrap%c ...wait
+match AnalyzeTrap%c Roundtime
+matchwait
+
+AnalyzeTrap5:
+goto DisarmIdent
+
+HarvestTrap:
+put disarm %B harvest
+match HarvestTrap ...wait
+match DisarmIdent unsuitable for harvesting
+match HarvDrop been completely harvested
+match HarvestTrap Roundtime
+matchwait
+
+HarvDrop:
+pause 1
+put glance
+match DropBlad bladder
+match DropBlad blade
+match DropCirc circle
+match DropClay clay
+match DropCrys crystal
+match DropCube cube
+match DropDisc disc
+match DropFace face
+match DropHamm hammer
+match DropLeg leg
+match DropNeed needle
+match DropPin pin in your
+match DropRes reservoir
+match DropRune rune
+match DropSeal seal
+match DropSphere sphere
+match DropSpring spring
+match DropStrik striker
+match DropStud studs
+match DropTube tube
+match DropVial vial
+match HarvDone nothing in your
+matchwait
+
+DropBlad:
+put drop blad
+goto HarvDone
+
+DropCirc:
+put drop circ
+goto HarvDone
+
+DropClay:
+put drop clay
+goto HarvDone
+
+DropCrys:
+put drop crys
+goto HarvDone
+
+DropCube:
+put drop cube
+goto HarvDone
+
+DropDisc:
+put drop disc
+goto HarvDone
+
+DropFace:
+put drop face
+goto HarvDone
+
+DropHamm:
+put drop hamm
+goto HarvDone
+
+DropLeg:
+put drop leg
+goto HarvDone
+
+DropNeed:
+put drop need
+goto HarvDone
+
+DropPin:
+put drop pin
+goto HarvDone
+
+DropRes:
+put drop res
+goto HarvDone
+
+DropRune:
+put drop rune
+goto HarvDone
+
+DropSeal:
+put drop seal
+goto HarvDone
+
+DropSphere:
+put drop sphere
+goto HarvDone
+
+DropSpring:
+put drop spring
+goto HarvDone
+
+DropStrik:
+put drop strik
+goto HarvDone
+
+DropStud:
+put drop stud
+goto HarvDone
+
+DropTube:
+put drop tube
+goto HarvDone
+
+DropVial:
+put drop vial
+goto HarvDone
+
+HarvDone:
+goto DisarmIdent
+
+DismantleBox:
+goto DismantleBoxHarvest%H
+
+DismantleBoxHarvestYes:
+counter set 0
+DismantleAnalyze0:
+DismantleAnalyze1:
+DismantleAnalyze2:
+DismantleAnalyze3:
+DismantleAnalyze4:
+DismantleAnalyze:
+counter add 1
+pause 1
+put disarm %B analyze
+match DismantleAnalyze ...wait
+match DismantleHarvest already analyzed this trap
+match DismantleBoxHarvestNo unsuitable for harvesting
+match DismantleAnalyze%c Roundtime
+matchwait
+
+DismantleHarvest:
+counter set 0
+DismantleHarvest0:
+DismantleHarvest1:
+DismantleHarvest2:
+DismantleHarvest3:
+DismantleHarvest4:
+pause 1
+put disarm %B harvest
+match DisHarvDone unsuitable for harvesting
+match DismantleHarvest%c Roundtime
+match DisHarvDrop been completely harvested
+matchwait
+
+DisHarvDrop:
+pause 1
+put glance
+match DisDropBlad bladder
+match DisDropBlad blade
+match DisDropCirc circle
+match DisDropClay clay
+match DisDropCrys crystal
+match DisDropCube cube
+match DisDropDisc disc
+match DisDropFace face
+match DisDropHamm hammer
+match DisDropLeg leg
+match DisDropNeed needle
+match DisDropPin pin in your
+match DisDropRes reservoir
+match DisDropRune rune
+match DisDropSeal seal
+match DisDropSphere sphere
+match DisDropSpring spring
+match DisDropStrik striker
+match DisDropStud studs
+match DisDropTube tube
+match DisDropVial vial
+match DisHarvDone nothing in your
+matchwait
+
+DisDropBlad:
+put drop blad
+goto DisHarvDone
+
+DisDropCirc:
+put drop circ
+goto DisHarvDone
+
+DisDropClay:
+put drop clay
+goto DisHarvDone
+
+DisDropCrys:
+put drop crys
+goto DisHarvDone
+
+DisDropCube:
+put drop cube
+goto DisHarvDone
+
+DisDropDisc:
+put drop disc
+goto DisHarvDone
+
+DisDropFace:
+put drop face
+goto DisHarvDone
+
+DisDropHamm:
+put drop hamm
+goto DisHarvDone
+
+DisDropLeg:
+put drop leg
+goto DisHarvDone
+
+DisDropNeed:
+put drop need
+goto DisHarvDone
+
+DisDropPin:
+put drop pin
+goto DisHarvDone
+
+DisDropRes:
+put drop res
+goto DisHarvDone
+
+DisDropRune:
+put drop rune
+goto DisHarvDone
+
+DisDropSeal:
+put drop seal
+goto DisHarvDone
+
+DisDropSphere:
+put drop sphere
+goto DisHarvDone
+
+DisDropSpring:
+put drop spring
+goto DisHarvDone
+
+DisDropStrik:
+put drop strik
+goto DisHarvDone
+
+DisDropStud:
+put drop stud
+goto DisHarvDone
+
+DisDropTube:
+put drop tube
+goto DisHarvDone
+
+DisDropVial:
+put drop vial
+goto DisHarvDone
+
+DismantleHarvest5:
+DismantleAnalyze5:
+DisHarvDone:
+DismantleBoxHarvestNo:
+put dismant my %B
+pause 1
+goto CheckEXP%X
+
+CheckEXPYes:
+pause 1
+put exp locks
+match LocksMindLocked 33/3
+match LocksMindLocked 34/3
+match GlanceForBox /3
+matchwait
+
+CheckEXPNo:
+goto GlanceForBox
+
+LocksMindLocked:
+echo
+echo ***************************
+echo
+echo *** Locksmithing mind locked ***
+echo
+echo *** Re-Equipping Armor! ***
+echo
+echo ***************************
+echo
+goto EquipArmor
+
+
+Done:
+echo
+echo ****************************
+echo
+echo *** All boxes open and looted! ***
+echo
+echo *** Re-Equipping Armor! ***
+echo
+echo ***************************
+echo
+goto EquipArmor
+
+EquipArmor:
+match EquipGlove gloves
+match EquipGaunt gauntlet
+match EquipSleeves sleeves
+match EquipVamb vambraces
+match EquipCowl cowl
+match EquipMask mask
+match EquipCap cap
+match EquipHelm helm
+match EquipBala balaclav
+match EquipArmet armet
+match EquipMorion morion
+match EquipBascinet bascinet
+match EquipBarbute barbute
+match EquipBackplate backplate
+match EquipFauld fauld
+match EquipLeatherArmor armor
+match EquipBreastplate breastplate
+match EquipCuirass cuirass
+match EquipPlate field plate
+match EquipPlate half plate
+match EquipPlate full plate
+match EquipPlate fluted plate
+match EquipCoat coat
+match EquipJerkin jerkin
+match EquipAvent aventail
+match EquipMant mantle
+match EquipTasset tasset
+match EquipShield shield
+match EquipTarge targe
+match EquipSipar sipar
+match EquipBuckler buckler
+match EquipAegis aegis
+match EquipVest vest
+match EquipLorica lorica
+match EquipShirt shirt
+match EquipLeath leathers
+match EquipHaub hauberk
+match EquipRobe robe
+match EquipLeatherArmor leather armor
+match EquipGreav greaves
+match EquipDone and a
+match EquipDone and some
+pause 1
+put look in my %Z
+matchwait
+
+ReEquip:
+put get my %s from my %Z
+put wear my %s
+goto EquipArmor
+
+EquipDone:
+pause 1
+echo
+echo **********************************************
+echo
+echo *** All armor should be equipped.  Please double check! ***
+echo
+echo **********************************************
+echo
+Exit
+
+EquipLeatherArmor:
+save armor
+goto ReEquip
+
+EquipCowl:
+save cowl
+goto ReEquip
+
+EquipMask:
+save mask
+goto ReEquip
+
+EquipCoat:
+save coat
+goto ReEquip
+
+EquipJerkin:
+save jerkin
+goto ReEquip
+
+EquipMorion:
+save morion
+goto ReEquip
+
+EquipBascinet:
+save bascinet
+goto ReEquip
+
+EquipBarbute:
+save barbute
+goto ReEquip
+
+EquipBackplate:
+save backplate
+goto ReEquip
+
+EquipFauld:
+save fauld
+goto ReEquip
+
+EquipBreastplate:
+save breastplate
+goto ReEquip
+
+EquipCuirass:
+save cuirass
+goto ReEquip
+
+EquipPlate:
+save field plate
+goto ReEquip
+
+EquipRobe:
+save robe
+goto ReEquip
+
+EquipLorica:
+save lorica
+goto ReEquip
+
+EquipTasset:
+save tasset
+goto ReEquip
+
+EquipVest:
+save vest
+goto ReEquip
+
+EquipMant:
+save mantl
+goto ReEquip
+
+EquipAvent:
+save aventail
+goto ReEquip
+
+EquipCap:
+save cap
+goto ReEquip
+
+EquipSleeves:
+save sleeves
+goto ReEquip
+
+EquipSipar:
+save sipar
+goto ReEquip
+
+EquipBuckler:
+save buckler
+goto ReEquip
+
+EquipAegis:
+save aegis
+goto ReEquip
+
+EquipArmet:
+save armet
+goto ReEquip
+
+EquipGlove:
+save glove
+goto ReEquip
+
+EquipGaunt:
+save gaunt
+goto ReEquip
+
+EquipHelm:
+save helm
+goto ReEquip
+
+EquipBala:
+save balac
+goto ReEquip
+
+EquipShield:
+save shield
+goto ReEquip
+
+EquipTarge:
+save targe
+goto ReEquip
+
+EquipShirt:
+save shirt
+goto ReEquip
+
+EquipLeath:
+save leathers
+goto ReEquip
+
+EquipHaub:
+save hauberk
+goto ReEquip
+
+EquipVamb:
+save vambr
+goto ReEquip
+
+EquipGreav:
+save greav
+goto ReEquip
