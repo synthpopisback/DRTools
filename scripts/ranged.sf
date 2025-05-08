@@ -105,7 +105,8 @@ RANGED:
       Match RANGEDPAUSEDELAY ...wait
       Match RANGEDAIM Roundtime
       Match RANGEDAIM already loaded
-      Match RANGEDNOAMMO don't have the proper ammunition
+      #Match RANGEDNOAMMO don't have the proper ammunition
+      Match RANGEDRETRIEVEAMMO You don't have the proper ammunition readily available
       Matchwait
 
    RANGEDAIM:
@@ -118,7 +119,6 @@ RANGED:
       Match RANGEDFIRE You begin to target
       Match RANGEDFIRE already targetting
       Match RANGEDGATHERAMMO referring to.
-      Match RANGEDRETRIEVEAMMO You don't have the proper ammunition readily available
       Matchwait
 
    RANGEDRETRIEVEAMMO:

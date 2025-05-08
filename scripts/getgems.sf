@@ -27,6 +27,7 @@ match ruby star ruby
 match sapphire pink sapphire
 match sapphire yellow sapphire
 match sapphire green sapphire
+match amber amber
 match amethyst amethyst
 match bar silver bar
 match nugget silver nugget
@@ -36,6 +37,14 @@ match bloodstone red-green bloodstone
 match rockcrystal rock crystal
 match diamond uncut diamond
 match diopside star diopside
+match tsavorite tsavorite
+match turquoise turquoise
+match tanzanite tanzanite
+match iolite iolite
+match chrysoberyl chrysoberyl
+match morganite morganite
+match jade jade
+match coral coral
 match jasper red jasper
 match quartz eye quartz
 match quartz rose quartz
@@ -190,6 +199,42 @@ goto %s
 
 gem:
 put stow gem
+goto %s
+
+amber:
+put stow amber
+goto %s
+
+tsavorite:
+put stow tsavorite
+goto %s
+
+turquoise:
+put stow turquoise
+goto %s
+
+morganite:
+put stow morganite
+goto %s
+
+iolite:
+put stow iolite
+goto %s
+
+jade:
+put stow jade
+goto %s
+
+chrysoberyl:
+put stow chrysoberyl
+goto %s
+
+tanzanite:
+put stow tanzanite
+goto %s
+
+coral:
+put stow coral
 goto %s
 
 sapphire:
