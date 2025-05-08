@@ -1,0 +1,21 @@
+put rem my helm
+put stow my helm
+pause .5
+put get flute from my flute case
+
+start:
+put play %1 %2 %3
+match check You finish playing
+matchwait
+
+check:
+put exp perform
+match start EXP HELP
+match end 34/34
+matchwait
+
+end:
+put put my flute in my flute case
+put get helm
+pause .5
+put wear helm
