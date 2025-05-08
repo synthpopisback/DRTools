@@ -1,15 +1,12 @@
 #Favor puzzle
 
 put pray
+pause .5
 put pray
-pause
+pause .5
 put pray
-pause
-put pray
-pause
-put pray
-pause
-put say truffenyi
+pause .5
+put say %IMMORTAL%
 pause
 put stand
 put get orb
@@ -60,9 +57,16 @@ put open window
 pause
 goto LEAVEROOM
 
+FLOWER:
+put get flower
+goto LEAVEROOM
+
 LEAVEROOM:
+put go tree
 put go stair
-pause
+pause .5
+put go door
+put go window
 match DONE You feel giddy all over
 match JUG jug
 match TINDERS tinders
@@ -70,8 +74,6 @@ match SPONGE sponge
 match WINDOW directly opposite an ancient window.
 match LOOK It would be difficult to go through the door
 match LEAVEROOM ...wait
-put go door
-put go window
 matchwait
 
 LOOK:
@@ -80,6 +82,7 @@ match JUG jug
 match TINDERS tinders
 match SPONGE sponge
 match WINDOW directly opposite an ancient window.
+match FLOWER vase
 put look
 matchwait
 

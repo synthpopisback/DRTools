@@ -118,6 +118,16 @@ RANGED:
       Match RANGEDFIRE You begin to target
       Match RANGEDFIRE already targetting
       Match RANGEDGATHERAMMO referring to.
+      Match RANGEDRETRIEVEAMMO You don't have the proper ammunition readily available
+      Matchwait
+
+   RANGEDRETRIEVEAMMO:
+      setvariable rangedlooppoint RANGEDRETRIEVEAMMO
+
+      put stow %rangedammo%
+
+      match RANGEDRETRIEVEAMMO You put your
+      match RANGEDLOAD Stow what
       Matchwait
 
    RANGEDFIRE:

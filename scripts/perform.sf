@@ -1,5 +1,26 @@
+put inv armor
+match balaclava balaclava
+match helm helm
+match cowl cowl
+match startup inventory help
+matchwait
+
+balaclava:
+put rem my balaclava
+put stow my balaclava
+goto startup
+
+helm:
 put rem my helm
 put stow my helm
+goto startup
+
+cowl:
+put rem my cowl
+put stow my cowl
+goto startup
+
+startup:
 pause .5
 put get flute from my flute case
 
@@ -11,11 +32,34 @@ matchwait
 check:
 put exp perform
 match start EXP HELP
-match end 34/34
+match end (33/34)
+match end (34/34)
 matchwait
 
 end:
 put put my flute in my flute case
-put get helm
+put look in my %BACKCONTAINER%
+match helm2 helm
+match cowl2 cowl
+match balaclava2 balaclava
+matchwait
+
+helm2:
+put get helm from my %BACKCONTAINER%
 pause .5
-put wear helm
+put wear my helm
+goto exit
+
+balaclava2:
+put get balaclava from my %BACKCONTAINER%
+pause .5
+put wear my balaclava
+goto exit
+
+cowl2:
+put get cowl2 from my %BACKCONTAINER%
+pause .5
+put wear my cowl
+goto exit
+
+exit:

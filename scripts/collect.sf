@@ -1,0 +1,15 @@
+put stand
+
+CHECK_IF_DONE:
+match COLLECT EXP HELP
+match DONE (33/34)
+match DONE (34/34)
+put exp perc
+matchwait
+
+COLLECT:
+put collect rock practice
+pause 1
+goto CHECK_IF_DONE
+
+DONE:
