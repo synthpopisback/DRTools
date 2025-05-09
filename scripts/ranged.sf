@@ -13,7 +13,7 @@ RANGED:
 
       put glance
 
-      Match RANGEDLCROSSBOW crossbow in your right
+      Match RANGEDLCROSSBOW %CROSSBOW%
       Match RANGEDHCROSSBOW teak stock in your right
       Match RANGEDSBOW shortbow in your right
       Match RANGEDLBOW longbow in your right
@@ -57,14 +57,14 @@ RANGED:
    RANGEDLCROSSBOW:
 
       setvariable rangedweapon crossbow
-      setvariable rangedammo quadrel
+      setvariable rangedammo bolt
 
       goto RANGEDLOAD
 
    RANGEDHCROSSBOW:
 
       setvariable rangedweapon slurbow
-      setvariable rangedammo quadrel
+      setvariable rangedammo bolt
 
       goto RANGEDLOAD
 

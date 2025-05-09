@@ -22,7 +22,7 @@ goto startup
 
 startup:
 pause .5
-put get flute from my flute case
+put get %INSTRUMENT% from my %INSTRUMENTCASE%
 
 start:
 put play %1 %2 %3
@@ -37,7 +37,7 @@ match end (34/34)
 matchwait
 
 end:
-put put my flute in my flute case
+put put my %INSTRUMENT% in my %INSTRUMENTCASE%
 put look in my %BACKCONTAINER%
 match helm2 helm
 match cowl2 cowl
