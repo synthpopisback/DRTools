@@ -1,4 +1,5 @@
 #Favor puzzle
+#Requires variable: %IMMORTAL%
 
 put pray
 pause .5

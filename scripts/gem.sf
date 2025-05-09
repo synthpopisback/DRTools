@@ -1,3 +1,5 @@
+#Requires variable: %BACKCONTAINER%
+
 put get my %1 pouch from my %BACKCONTAINER%
 put open my %1 pouch
 pause

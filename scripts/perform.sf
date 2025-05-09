@@ -1,3 +1,7 @@
+#Requires variable: %INSTRUMENT%
+#Requires variable: %INSTRUMENTCASE%
+
+
 put inv armor
 match balaclava balaclava
 match helm helm
