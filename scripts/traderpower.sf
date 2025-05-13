@@ -1,0 +1,32 @@
+
+perc:
+put perc xibar
+waitfor roundtime
+pause
+put perc yavash
+waitfor roundtime
+pause
+put perc katamba
+waitfor roundtime
+pause
+put perc fabrication
+waitfor roundtime
+pause
+put perc illusion
+waitfor roundtime
+pause
+put perc noematics
+waitfor roundtime
+pause
+put perc planets
+waitfor roundtime
+pause
+
+percexpcheck:
+match perc EXP HELP
+match end (33/34)
+match end (34/34)
+put exp attunement
+matchwait
+
+end:

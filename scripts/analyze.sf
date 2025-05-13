@@ -1,3 +1,5 @@
+put stance set %MELEESTANCE%
+
 LOOP:
 MATCH JAB landing a jab
 MATCH FEINT landing a feint
@@ -98,6 +100,7 @@ FEINT:
 ATTACK:
 	MATCH LOOP Roundtime
 	MATCH ATTACK ...wait
+	MATCH ATTACK You begin to advance
 	put %s
 	MATCHWAIT
 

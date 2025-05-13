@@ -17,15 +17,15 @@
 setvariable X yes
 #
 # ----- PackCheck ----- add the container your boxes are in after the P below.
- setvariable P pack
+ setvariable P backpack
 #
 # ----- ArmorStash ----- add the container that you want to put your armor in
- setvariable Z pack
+ setvariable Z backpack
 #
 #------ DismantleHarvest --- determines if, after picking the lock, you wish to harvest
 #---------------------------------- the trap or not.  Must be set manually at the beginning
 #---------------------------------- of the script.  Options are NO or YES
-setvariable H no
+setvariable H yes
 
 #END VARIABLE SETTINGS  -  Script starts below:
 
@@ -964,6 +964,7 @@ StowGem:
 put get my %G from my %B
 put stow %G
 match LootBox you put
+match LootBox You open your pouch
 match NeedNewGemContainer got a wealth of gems
 matchwait
 
@@ -1358,83 +1359,83 @@ match HarvDone nothing in your
 matchwait
 
 DropBlad:
-put drop blad
+put stow blad
 goto HarvDone
 
 DropCirc:
-put drop circ
+put stow circ
 goto HarvDone
 
 DropClay:
-put drop clay
+put stow clay
 goto HarvDone
 
 DropCrys:
-put drop crys
+put stow crys
 goto HarvDone
 
 DropCube:
-put drop cube
+put stow cube
 goto HarvDone
 
 DropDisc:
-put drop disc
+put stow disc
 goto HarvDone
 
 DropFace:
-put drop face
+put stow face
 goto HarvDone
 
 DropHamm:
-put drop hamm
+put stow hamm
 goto HarvDone
 
 DropLeg:
-put drop leg
+put stow leg
 goto HarvDone
 
 DropNeed:
-put drop need
+put stow need
 goto HarvDone
 
 DropPin:
-put drop pin
+put stow pin
 goto HarvDone
 
 DropRes:
-put drop res
+put stow res
 goto HarvDone
 
 DropRune:
-put drop rune
+put stow rune
 goto HarvDone
 
 DropSeal:
-put drop seal
+put stow seal
 goto HarvDone
 
 DropSphere:
-put drop sphere
+put stow sphere
 goto HarvDone
 
 DropSpring:
-put drop spring
+put stow spring
 goto HarvDone
 
 DropStrik:
-put drop strik
+put stow strik
 goto HarvDone
 
 DropStud:
-put drop stud
+put stow stud
 goto HarvDone
 
 DropTube:
-put drop tube
+put stow tube
 goto HarvDone
 
 DropVial:
-put drop vial
+put stow vial
 goto HarvDone
 
 HarvDone:
@@ -1502,83 +1503,83 @@ match DisHarvDone nothing in your
 matchwait
 
 DisDropBlad:
-put drop blad
+put put blad in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropCirc:
-put drop circ
+put put circ in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropClay:
-put drop clay
+put put clay in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropCrys:
-put drop crys
+put put crys in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropCube:
-put drop cube
+put put cube in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropDisc:
-put drop disc
+put put disc in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropFace:
-put drop face
+put put face in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropHamm:
-put drop hamm
+put put hamm in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropLeg:
-put drop leg
+put put leg in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropNeed:
-put drop need
+put put need in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropPin:
-put drop pin
+put put pin in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropRes:
-put drop res
+put put res in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropRune:
-put drop rune
+put put rune in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropSeal:
-put drop seal
+put put seal in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropSphere:
-put drop sphere
+put put sphere in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropSpring:
-put drop spring
+put put spring in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropStrik:
-put drop strik
+put put strik in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropStud:
-put drop stud
+put put stud in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropTube:
-put drop tube
+put put tube in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DisDropVial:
-put drop vial
+put put vial in %TRAPCOMPONENTCONTAINER%
 goto DisHarvDone
 
 DismantleHarvest5:

@@ -61,7 +61,7 @@ put wear my balaclava
 goto exit
 
 cowl2:
-put get cowl2 from my %BACKCONTAINER%
+put get cowl from my %BACKCONTAINER%
 pause .5
 put wear my cowl
 goto exit

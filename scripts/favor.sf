@@ -18,6 +18,7 @@ match DONE You feel giddy all over
 match JUG jug
 match TINDERS tinders
 match SPONGE sponge
+match FLOWER vase
 match WINDOW directly opposite an ancient window.
 match GOARCH ...wait
 put go arch
@@ -71,6 +72,7 @@ put go window
 match DONE You feel giddy all over
 match JUG jug
 match TINDERS tinders
+match FLOWER vase
 match SPONGE sponge
 match WINDOW directly opposite an ancient window.
 match LOOK It would be difficult to go through the door
