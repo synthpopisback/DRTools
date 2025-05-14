@@ -8,9 +8,9 @@ pause
 put app my sword careful
 waitfor RoundTime
 pause
-put sheath my sword in my spidersilk sheath
+put sheath my sword
 
-put get black pouch from my pack
+put get black pouch from my %BACKCONTAINER%
 put open my black pouch
 pause
 put app my black pouch careful

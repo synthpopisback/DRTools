@@ -101,6 +101,7 @@ ATTACK:
 	MATCH LOOP Roundtime
 	MATCH ATTACK ...wait
 	MATCH ATTACK You begin to advance
+	MATCH ATTACK You are already advancing
 	put %s
 	MATCHWAIT
 
