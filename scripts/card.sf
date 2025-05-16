@@ -1,0 +1,18 @@
+add:
+put get my coll case from my %BACKCONTAINER%
+put open my coll case
+pause .5
+put rummage my %BACKCONTAINER%
+match add2 card
+match exit You rummage through
+matchwait
+
+add2:
+put get card from my %BACKCONTAINER%
+put card add
+pause .5
+goto add
+
+exit:
+put close my coll case
+put put my coll case in my %BACKCONTAINER%

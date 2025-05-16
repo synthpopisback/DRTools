@@ -1,0 +1,28 @@
+start:
+put get %INSTRUMENT% from my %INSTRUMENTCASE%
+shake:
+pause
+put shake my %INSTRUMENT%
+match shake roundtime
+match clean you shake your
+matchwait
+clean:
+pause
+put get cloth from my %INSTRUMENTCASE%
+put clean my %INSTRUMENT% with my cloth
+match clean roundtime
+match stowcloth is not in need of cleaning
+matchwait
+stowcloth:
+pause
+put put my cloth in my %INSTRUMENTCASE%
+put get my kit from my %INSTRUMENTCASE%
+repair:
+pause
+put repair my %INSTRUMENT%
+match repair roundtime
+match end is not in need of repair
+end:
+pause
+put put my kit in my %INSTRUMENTCASE%
+put put my %INSTRUMENT% in my %INSTRUMENTCASE%

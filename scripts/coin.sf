@@ -1,0 +1,18 @@
+add:
+put get my coin case from my %BACKCONTAINER%
+put open my coin case
+pause .5
+put rummage my %BACKCONTAINER%
+match add2 dira
+match exit You rummage through
+matchwait
+
+add2:
+put get dira from my %BACKCONTAINER%
+put dira add
+pause .5
+goto add
+
+exit:
+put close my coin case
+put put my coin case in my %BACKCONTAINER%
