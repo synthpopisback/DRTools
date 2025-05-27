@@ -1,0 +1,95 @@
+whichspell:
+put observe sky
+match burn Katamba is unobscured by clouds
+match burn Xibar is unobscured by clouds
+match burn Yavash is unobscured by clouds
+match pd You are a bit too distracted to be observing something
+match pd Roundtime
+matchwait
+
+burn:
+setvariable spell burn 8
+goto assess
+
+pd:
+setvariable spell pd 8
+goto assess
+
+assess:
+match start Concentration
+match expcheck you at melee
+match expcheck you at pole
+match expcheck you at missile
+
+put assess
+put focus
+matchwait
+
+start:
+pause
+waitfor melee range on you
+
+expcheck:
+match fatiguecheck EXP HELP
+match fatiguecheck mind lock
+put skill tm
+matchwait
+
+pause:
+pause 200
+put awake
+goto expcheck
+
+fatiguepause:
+pause 5
+
+fatiguecheck:
+match bolt completely rested
+match fatiguepause Concentration
+put fatigue
+put focus
+matchwait
+
+bolt:
+pause .5
+put target %spell% %1
+match cast Your formation of a
+match facenext not engaged
+matchwait
+
+cast:
+match facenext on yourself
+match arrange falls to the ground lifeless
+match arrange lies still
+match arrange ceases all movement
+match arrange dull thud
+match arrange heavy thud
+match bolt roundtime
+pause 3
+put cast
+matchwait
+
+arrange:
+#pause
+#put arrange
+#waitfor roundtime
+#pause
+#put arrange
+#waitfor roundtime
+#pause
+pause 
+put empty left
+
+facenext:
+put release
+match calm you turn
+match assess nothing else to face
+put face next
+matchwait
+
+calm:
+put prep calm 5
+waitfor You feel fully prepared to cast your spell.
+pause .5
+put cast %1
+goto expcheck

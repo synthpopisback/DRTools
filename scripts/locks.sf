@@ -25,7 +25,7 @@ setvariable X yes
 #------ DismantleHarvest --- determines if, after picking the lock, you wish to harvest
 #---------------------------------- the trap or not.  Must be set manually at the beginning
 #---------------------------------- of the script.  Options are NO or YES
-setvariable H yes
+setvariable H no
 
 #END VARIABLE SETTINGS  -  Script starts below:
 

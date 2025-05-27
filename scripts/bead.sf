@@ -1,0 +1,74 @@
+#This script assists you in carving a bead from a block in your possession.
+
+put get my %1 primer
+
+Start:
+put glance
+match PRIMER1 You glance down to see a parchment
+match GETTOOLS You glance down at your empty
+matchwait
+
+PRIMER:
+pause 1
+put study my primer
+match PRIMERTURN Roundtime
+match PRIMER0 But the primer is closed!
+match PRIMER1 You should start on the first
+match PRIMER2 You have already studied
+match PRIMER3 You finish studying the last page
+matchwait
+
+PRIMERTURN:
+pause 1
+put turn my primer
+goto PRIMER
+
+PRIMER0:
+pause 1
+put open my primer
+goto PRIMER
+
+PRIMER1:
+pause 1
+put close my primer
+put open my primer
+goto PRIMER
+
+PRIMER2:
+pause 1
+put turn my primer
+goto PRIMER
+
+PRIMER3:
+pause 1
+put close my primer
+put put my primer in my bag
+goto GETTOOLS
+
+GETTOOLS:
+pause 1
+put get my shaper
+put get my block
+goto SHAPE
+
+SHAPE:
+pause 1
+put shape block to %1
+match SHAPE Roundtime
+match SHAPE You smile with satisfaction as you continue
+match SHAPE With heavy strokes, 
+match SHAPE Trying your best,
+match SHAPE block taking shape in the form of
+match SHAPE Pursing your lips
+match SHAPE You focus
+match BEADDONE Your spirit soars with pride
+matchwait
+
+
+BEADDONE:
+pause 1
+put stow my bead
+put stow my shaper
+echo *****************************************
+echo *           You have completed your bead.                 *
+echo *****************************************

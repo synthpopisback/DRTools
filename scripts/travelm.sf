@@ -7910,10 +7910,10 @@ move ne
 move go Provincial Bank
 move go teller window
 put withdraw 35 copper
-waitfor SCRIPT DONE
+waitfor The clerk counts
 pause
 put withdraw 35 copper
-waitfor SCRIPT DONE
+waitfor The clerk counts
 pause
 move out
 move out

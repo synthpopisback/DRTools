@@ -1,0 +1,30 @@
+put look in bottle
+match end There is nothing in there.
+match start you see some
+matchwait
+
+start:
+put get %1 from my pack
+put swap
+pause
+put get water from my bottle
+put prep bless
+pause 2
+put sprinkle my water on my %1
+put cast my %1
+pause
+put put my water in my bottle
+put wield my knife
+loop:
+pause
+put carve my %1 with my knife
+match loop You begin to hack
+match loop With fluid strokes
+match loop You continue to
+match loop You grow more careful
+match end With a final deep cut the rest of the
+matchwait
+end:
+pause
+put sheath my knife in my spidersilk sheath
+put put block in my pack
