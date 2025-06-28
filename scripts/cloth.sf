@@ -1,0 +1,56 @@
+counter set %3
+
+loop10:
+loop9:
+loop8:
+loop7:
+loop6:
+loop5:
+loop4:
+loop3:
+loop2:
+loop1:
+
+put get %2 from my %BACKCONTAINER%
+pause
+put get my tailoring book
+put study my book
+waitfor roundtime
+pause
+put put my book in my sack
+pause .5
+put get sciss from my sack
+pause
+
+match measure
+match secure
+match cut
+match sew
+match loop roundtime
+put cut my %2 with sciss
+matchwait
+
+loop:
+match measure
+match secure
+match cut
+match sew
+match loop roundtime
+match loop ...wait
+put cut my %2 with sciss
+matchwait
+
+measure:
+
+
+secure:
+
+cut:
+
+sew:
+#put analyze my %1
+put put my %1 in my pack
+counter subtract 1
+goto loop%c
+
+loop0:

@@ -1,0 +1,27 @@
+move nw
+move n
+move n
+move n
+move n
+move n
+move n
+move w
+move w
+move n
+move e
+move e
+move n
+move n
+move w
+put go arch
+move n
+move ne
+move n
+put go gully
+move w
+move nw
+move up
+put go path
+move n
+move n
+put go grove

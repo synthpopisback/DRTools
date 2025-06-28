@@ -1,0 +1,16 @@
+move ne
+put go gate
+move nw
+move nw
+move n
+move e
+move e
+put climb trail
+move up
+move w
+move up
+move up
+put go entr
+put go crev
+put climb ladder
+move n

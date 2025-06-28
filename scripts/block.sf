@@ -14,7 +14,7 @@ put sprinkle my water on my %1
 put cast my %1
 pause
 put put my water in my bottle
-put wield my knife
+put wield my belt knife
 loop:
 pause
 put carve my %1 with my knife
@@ -26,5 +26,5 @@ match end With a final deep cut the rest of the
 matchwait
 end:
 pause
-put sheath my knife in my spidersilk sheath
+put sheath my belt knife in my spidersilk sheath
 put put block in my pack

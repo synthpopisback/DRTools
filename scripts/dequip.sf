@@ -1,0 +1,17 @@
+put rem my %1
+put stow my %1
+pause .5
+put rem my %2
+put stow my %2
+pause .5
+put rem my %3
+put stow my %3
+pause .5
+put rem my %4
+put stow my %4
+pause .5
+put rem my %5
+put stow my %5
+pause .5
+put rem my %6
+put stow my %6

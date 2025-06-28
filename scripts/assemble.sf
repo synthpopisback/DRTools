@@ -1,0 +1,22 @@
+# TODO: add command-line option for looping
+# TODO: add command-line option for armor and weapon
+match end referring to
+start:
+put get %1 from my pack
+put get %2 from my pack
+pause
+put assemble my %1 with my %2
+pause
+IF_3 goto three
+goto loop
+
+three:
+put get %3 from my pack
+put assemble my %1 with my %3
+goto loop
+
+loop:
+put put %1 in my sack
+goto start
+
+end:

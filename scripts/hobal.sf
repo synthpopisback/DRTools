@@ -1,0 +1,72 @@
+goto %2
+
+balance:
+save balance
+put get weapon book
+put turn my book to chapter 10
+pause .5
+put turn my book to page 3
+put study my book
+waitfor roundtime
+pause .5
+put put book in my sack
+put get brush from my sack
+goto loop
+
+hone:
+save hone
+put get weapon book
+put turn my book to chapter 10
+pause .5
+put turn my book to page 1
+put study my book
+waitfor roundtime
+pause .5
+put put book in my sack
+put get brush from my sack
+goto loop
+
+honeloop:
+balanceloop:
+loop:
+match turn but is still rather slow
+match push keeping it spinning fast.
+match push making it spin even faster
+match rub As you finish the fire flickers and is unable to consume its fuel.
+match push As you finish working the fire dims and produces less heat from
+match turn roundtime
+put turn grindstone
+matchwait
+
+push:
+pause
+match rub The grinding has left many nicks and burs in the metal that should be cleaned away.
+match turn roundtime
+match pour With grinding complete, the metal now needs protection by pouring oil on it.
+put push grind with my %1
+matchwait
+
+rub:
+pause
+match rub The grinding has left many nicks and burs in the metal that should be cleaned away.
+match turn roundtime
+match pour With grinding complete, the metal now needs protection by pouring oil on it.
+put rub my %1 with my brush
+matchwait
+
+turn:
+pause
+put turn grindstone
+waitfor RoundTime
+pause
+goto loop
+
+pour:
+pause
+put put my brush in my sack
+put get oil from my sack
+pause
+put pour oil on my %1
+waitfor roundtime
+pause .5
+put put my oil in my sack

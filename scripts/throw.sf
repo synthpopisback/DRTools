@@ -1,0 +1,14 @@
+start:
+put wield dagger from my sheath
+put throw my dagger at %1
+match start roundtime
+match stow wield what
+matchwait
+
+stow:
+match stow you put
+match end stow what
+put stow dagger
+matchwait
+
+end:

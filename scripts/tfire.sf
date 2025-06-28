@@ -1,0 +1,28 @@
+move s
+move s
+move s
+move e
+move ne
+move se
+move e
+move sw
+move w
+move sw
+move w
+put go road
+move n
+move n
+move n
+move nw
+put go trail
+move w
+put climb rockslide
+move n
+move ne
+pause 5
+move ne
+put go flow
+move ne
+put go path
+move n
+move w

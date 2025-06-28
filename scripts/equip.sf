@@ -1,0 +1,17 @@
+put get my %1 from my %BACKCONTAINER%
+put wear my %1
+pause .5
+put get my %2 from my %BACKCONTAINER%
+put wear my %2
+pause .5
+put get my %3 from my %BACKCONTAINER%
+put wear my %3
+pause .5
+put get my %4 from my %BACKCONTAINER%
+put wear my %4
+pause .5
+put get my %5 from my %BACKCONTAINER%
+put wear my %5
+pause .5
+put get my %6 from my %BACKCONTAINER%
+put wear my %6

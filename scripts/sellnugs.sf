@@ -1,0 +1,22 @@
+tin:
+put get my tin nugget
+match tin hands you
+match zinc referring to
+put sell my nugget
+matchwait
+
+zinc:
+put get my zinc nugget
+match zinc hands you
+match nickel referring to
+put sell my nugget
+matchwait
+
+nickel:
+put get my nickel nugget
+match nickel hands you
+match end referring to
+put sell my nugget
+matchwait
+
+end:

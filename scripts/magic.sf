@@ -1,0 +1,87 @@
+start1:
+echo ***Mass Rejuvenation, training Utility***
+put prep mre 30 
+pause .5
+put charge my camb armband 30
+waitfor RoundTime
+pause
+put invoke my camb armband
+waitfor RoundTime
+match cast1 You feel fully prepared to cast your spell.
+matchwait
+
+cast1:
+put cast
+pause
+goto check1
+
+check1:
+put exp utility
+match start1 EXP HELP for more information
+match start2 % bewildered
+match start2 % dazed
+match start2 % mind lock
+matchwait
+
+start2:
+echo ***Benediction, training Augmentation***
+put prep bene 30 
+pause .5
+put charge my camb armband 30
+waitfor RoundTime
+pause
+put invoke my camb armband
+waitfor RoundTime
+match cast2 You feel fully prepared to cast your spell.
+matchwait
+
+cast2:
+put cast huldah
+pause
+goto check2
+
+check2:
+put exp augmentation
+match start2 EXP HELP for more information
+match start3 % bewildered
+match start3 % dazed
+match start3 % mind lock
+matchwait
+
+start3:
+echo ***Sanyu Lyba, training Warding***
+put prep sl 
+pause .5
+put charge my camb armband 10
+waitfor RoundTime
+pause
+put invoke my camb armband
+waitfor RoundTime
+match cast3 You feel fully prepared to cast your spell.
+matchwait
+
+cast3:
+put cast
+pause
+goto check3
+
+check3:
+put exp warding
+match start3 EXP HELP for more information
+match start4 % bewildered
+match start4 % dazed
+match start4 % mind lock
+matchwait
+
+start4:
+goto end
+echo ***Power***
+put perc mana
+waitfor RoundTime
+pause
+put exp attunement
+match start1 EXP HELP for more information
+match end % mind lock
+matchwait
+
+end:

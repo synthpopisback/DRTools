@@ -1,0 +1,87 @@
+put get ingot from my pack
+put put my ingot on anvil
+pause
+put get my %2 book
+put study my book
+waitfor roundtime
+pause
+put put my book in my sack
+pause .5
+put untie hammer from my forg belt
+put untie tongs from my forg belt
+pause
+
+match fuel As you complete working the fire dies down and needs more fuel.
+match fuel As you complete working the fire dies down and appears to need some more fuel.
+match fuel The fire needs more fuel before you can do that.
+match turn would benefit from some soft reworking.
+match turn could use some straightening along the horn of the anvil.
+match turn The metal must be drawn into wire on a mandrel and placed in mold sets using tongs.
+match turn The metal must be transfered to plate molds and drawn into wire on a mandrel set using tongs.
+match bellows As you finish the fire flickers and is unable to consume its fuel.
+match bellows As you finish working the fire dims and produces less heat from the stifled coals.
+match push The metal now appears ready for cooling in the slack tub.
+match push ready for a quench hardening in the slack tub.
+match loop roundtime
+put pound ingot on anvil with my hammer
+matchwait
+
+loop:
+match fuel As you complete working the fire dies down and needs more fuel.
+match fuel As you complete working the fire dies down and appears to need some more fuel.
+match fuel The fire needs more fuel before you can do that.
+match turn would benefit from some soft reworking.
+match turn could use some straightening along the horn of the anvil.
+match turn The metal must be drawn into wire on a mandrel and placed in mold sets using tongs.
+match turn The metal must be transfered to plate molds and drawn into wire on a mandrel set using tongs.
+match bellows As you finish the fire flickers and is unable to consume its fuel.
+match bellows As you finish working the fire dims and produces less heat from the stifled coals.
+match push The metal now appears ready for cooling in the slack tub.
+match push ready for a quench hardening in the slack tub.
+match loop roundtime
+match loop ...wait
+put pound %1 on anvil with my hammer
+matchwait
+
+bellows:
+pause
+put tie my hammer to my forg belt
+put untie bellows from my forg belt
+pause .5
+put push my bellows
+waitfor RoundTime
+pause
+put tie my bellows to my forg belt
+put untie hammer from my forg belt
+goto loop
+
+fuel:
+pause
+put tie my hammer to my forg belt
+put untie shovel from my forg belt
+pause .5
+put push fuel with my shovel
+waitfor RoundTime
+pause
+put tie my shovel to my forg belt
+put untie hammer from my forg belt
+goto loop
+
+turn:
+pause
+match push slack tub.
+match loop roundtime
+put turn %1 on anvil with my tongs
+matchwait
+
+push:
+pause
+put push tub
+waitfor RoundTime
+pause
+put tie my hammer to my forg belt
+put tie my tongs to my forg belt
+pause
+put get %1 from anvil
+#put analyze my %1
+put put my %1 in my pack

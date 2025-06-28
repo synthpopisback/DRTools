@@ -1,0 +1,68 @@
+put untie tongs from my forg belt
+pause
+put put %1 on forge
+pause
+match fuel As you complete working the fire dies down and needs more fuel.
+match fuel fire dies down and appears to need some more fuel
+match bellows As you finish the fire flickers and is unable to consume its fuel.
+match bellows As you finish working the fire dims and produces less heat from
+match pour needs to be cleaned of the clay by pouring oil on it
+match pour metal looks to be in need of some oil to preserve
+match loop roundtime
+put put %1 on forge
+matchwait
+
+loop:
+pause .5
+match fuel As you complete working the fire dies down and needs more fuel.
+match fuel fire dies down and appears to need some more fuel
+match bellows As you finish the fire flickers and is unable to consume its fuel.
+match bellows As you finish working the fire dims and produces less heat from
+match pour needs to be cleaned of the clay by pouring oil on it
+match pour metal looks to be in need of some oil to preserve
+match loop roundtime
+put turn %1 on forge with my tongs
+matchwait
+
+bellows:
+pause
+put tie tongs to my forg belt
+put untie bellows from my forg belt
+pause .5
+put push my bellows
+waitfor RoundTime
+pause
+put tie my bellows to my forg belt
+put untie tongs from my forg belt
+goto loop
+
+fuel:
+pause
+put tie tongs to my forg belt 
+put untie shovel from my forg belt 
+pause .5
+put push fuel with my shovel
+waitfor RoundTime
+pause
+put tie shovel to my forg belt 
+put untie tongs from my forg belt 
+goto loop
+
+turn:
+pause
+match loop RoundTime
+match pour needs to be cleaned of the clay by pouring oil on it
+match
+put turn %1 on anvil with my tongs
+matchwait
+
+pour:
+put tie my tongs to my forg belt
+pause
+put get %1 from forge
+put get oil from my sack
+pause
+put pour oil on my %1
+waitfor roundtime
+pause .5
+put put my oil in my sack

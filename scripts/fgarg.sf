@@ -1,0 +1,27 @@
+put go path
+move s
+move s
+put go path
+move d
+move se
+move e
+put go road
+move s
+move sw
+move s
+put go arch
+move e
+move s
+move s
+move w
+move w
+move s
+move e
+move s
+move s
+move s
+move s
+move s
+move e
+move e
+move se

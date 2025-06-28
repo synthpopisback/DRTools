@@ -1,0 +1,25 @@
+put get oil from my sack
+save pack
+
+IF_2 goto two
+
+start:
+pause
+match stow roundtime
+match end referring to
+match end you must be
+put get %1 from my %s
+pause
+put pour oil on my %1
+matchwait
+
+two:
+save sack
+goto start
+
+stow:
+put put my %1 in my back
+goto start
+
+end:
+put put oil in my sack

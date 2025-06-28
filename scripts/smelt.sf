@@ -1,0 +1,76 @@
+IF_1 goto flux
+
+rod:
+put untie rod from my forg belt
+goto loop
+
+flux:
+put get my flux from my sack
+match fluxfuel As you complete working the fire dies down and needs more fuel.
+match fluxturn Upon finishing you observe clumps of molten metal accumulating along the crucible's sides.
+match fluxbellows As you finish the fire flickers and is unable to consume its fuel.
+match fluxloop roundtime
+put pour my flux in cruc
+matchwait
+
+fluxfuel:
+put put my flux in my sack
+goto fuel
+
+fluxturn:
+put put my flux in my sack
+put untie rod from my forg belt
+goto turn
+
+fluxbellows:
+put put my flux in my sack
+goto bellows
+
+fluxloop:
+put put my flux in my sack
+goto rod
+
+loop:
+match fuel As you complete working the fire dies down and needs more fuel.
+match turn Upon finishing you observe clumps of molten metal accumulating along the crucible's sides.
+match bellows As you finish the fire flickers and is unable to consume its fuel.
+match end You can only mix a crucible if it has something inside of it.
+match loop roundtime
+pause
+put stir cruc with my rod
+matchwait
+
+bellows:
+pause
+put tie my rod to my forg belt
+put untie bellows from my forg belt
+pause .5
+put push my bellows
+waitfor RoundTime
+pause
+put tie my bellows to my forg belt
+put untie rod from my forg belt
+goto loop
+
+fuel:
+pause
+put tie my rod to my forg belt
+put untie shovel from my forg belt
+pause .5
+put push fuel with my shovel
+waitfor RoundTime
+pause
+put tie my shovel to my forg belt
+put untie rod from my forg belt
+goto loop
+
+turn:
+pause
+put turn cruc with my rod
+waitfor RoundTime
+pause
+goto loop
+
+end:
+put tie my rod to my forg belt
+put analyze my ingot

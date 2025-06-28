@@ -1,0 +1,36 @@
+start:
+match end what were you referring to
+match continue you get
+put get %1 from my pack
+matchwait
+
+continue:
+put untie my saw
+pause .5
+put cut my %1 with my saw
+waitfor roundtime
+pause
+put cut my %1 with my saw
+waitfor roundtime
+pause
+put cut my %1 with my saw
+waitfor roundtime
+pause
+put tie my saw to my shap toolb
+put untie my drawkn
+pause .5
+put scrape my %1 with my drawkn
+waitfor roundtime
+pause
+put scrape my %1 with my drawkn
+waitfor roundtime
+pause
+put scrape my %1 with my drawkn
+waitfor roundtime
+pause
+put tie my drawkn to my shap toolb
+put put lumber in statue
+goto start
+
+end:
+put tie my saw to my shap toolbelt
